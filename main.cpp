@@ -1,9 +1,13 @@
 #include <iostream>
 
+#include "UserMenager.h"
+
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    UserMenager userMenager;
+
+    userMenager.userRegistration();
     return 0;
 }

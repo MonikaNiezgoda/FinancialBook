@@ -2,9 +2,10 @@
 
 void UserMenager::userRegistration()
 {
+    FileWithUsers fileWithUsers;
     User user = getNewUserData();
     users.push_back(user);
-    //plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
+    fileWithUsers.addUserToData(user);
 
     cout<<endl<<"Konto zalozono pomyslnie"<<endl<<endl;
     system("pause");
@@ -31,3 +32,25 @@ User UserMenager::getNewUserData()
 
     return user;
 }
+
+int UserMenager::getNewUserId()
+{
+    if (users.empty() == true)
+        return 1;
+    else
+        return users.back().getID()+ 1;
+
+}
+bool UserMenager::isLoginExist(string login)
+{
+    for (int i=0; i<users.size(); i++)
+    {
+        if (users[i].getLogin()==login)
+        {
+            cout << endl << "Istnieje uzytkownik o takim loginie." << endl;
+            return true;
+        }
+        return false;
+    }
+}
+

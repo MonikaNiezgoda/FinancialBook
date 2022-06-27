@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1655999958 source:c:\users\monika\documents\moniki\projekty c++\financialbook\user.cpp
+	"User.h"
+
+1656174125 c:\users\monika\documents\moniki\projekty c++\financialbook\user.h
+	<iostream>
+
+1303067212 source:c:\users\monika\documents\moniki\projekty c++\financialbook\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1303067212 c:\users\monika\documents\moniki\projekty c++\financialbook\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1656347339 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
+	"FileWithUsers.h"
+
+1656347038 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"User.h"
+	"Markup.h"
+
+1656347118 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
+	<iostream>
+	"FileWithUsers.h"
+	"User.h"
+
+1656347118 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
+	<iostream>
+	"UserMenager.h"
+
+1656346891 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
+	"UserMenager.h"
+
