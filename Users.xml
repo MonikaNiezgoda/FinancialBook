@@ -10,4 +10,9 @@
 <Login>natka</Login>
 <Password>222</Password>
 </User>
+<User>
+<UserId>1</UserId>
+<Login>marcin</Login>
+<Password>3</Password>
+</User>
 </Users>

@@ -12,29 +12,56 @@ void FileWithUsers::addUserToData(User user)
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
         xml.AddElem("Users");
         xml.FindElem();
-    xml.IntoElem();
-    xml.AddElem("User");
-    xml.IntoElem();
-    xml.AddElem("UserId", user.getID() );
-    xml.AddElem("Login", user.getLogin());
-    xml.AddElem("Password", user.getPassword());
+        xml.IntoElem();
+        xml.AddElem("User");
+        xml.IntoElem();
+        xml.AddElem("UserId", user.getID() );
+        xml.AddElem("Login", user.getLogin());
+        xml.AddElem("Password", user.getPassword());
 
-    xml.Save(FILE_NAME_WITH_USERS);
+        xml.Save(FILE_NAME_WITH_USERS);
     }
-if(fileExists)
-{
-         xml.FindElem();
-    xml.IntoElem();
-    xml.AddElem("User");
-    xml.IntoElem();
-    xml.AddElem("UserId", user.getID() );
-    xml.AddElem("Login", user.getLogin());
-    xml.AddElem("Password", user.getPassword());
+    if(fileExists)
+    {
+        xml.FindElem();
+        xml.IntoElem();
+        xml.AddElem("User");
+        xml.IntoElem();
+        xml.AddElem("UserId", user.getID() );
+        xml.AddElem("Login", user.getLogin());
+        xml.AddElem("Password", user.getPassword());
 
-    xml.Save(FILE_NAME_WITH_USERS);
+        xml.Save(FILE_NAME_WITH_USERS);
+    }
+    else
+        cout << "Nie udalo sie otworzyc pliku " << FILE_NAME_WITH_USERS << " i zapisac w nim danych." << endl;
 }
 
-    else
-    cout << "Nie udalo sie otworzyc pliku " << FILE_NAME_WITH_USERS << " i zapisac w nim danych." << endl;
+vector <User> FileWithUsers::loadUsersFromFile()
+{
+    User user;
+    vector <User> users;
+    CMarkup xml;
+    bool bSuccess = xml.Load( "users.xml");
+    xml.FindElem();
+    xml.IntoElem();
 
+    while(xml.FindElem("User"))
+    {
+        xml.IntoElem();
+        if (xml.FindElem("UserId"))
+        {
+            user.setID(atoi(xml.GetData().c_str()));   //atoi(pojedynczaDanaUzytkownika.c_str())
+            if(xml.FindElem("Login"))
+            {
+                user.setLogin(xml.GetData());
+            }
+            if(xml.FindElem("Password"))
+            {
+                user.setPassword(xml.GetData());
+            }
+            xml.OutOfElem();
+        }
+    }
+    return users;
 }

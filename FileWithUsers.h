@@ -2,7 +2,6 @@
 #define FILEWITHUSERS_H
 #include <iostream>
 #include <vector>
-#include <fstream>
 #include <cstdlib>
 
 #include "User.h"
@@ -21,7 +20,7 @@ class FileWithUsers
 
     void addUserToData(User user);
     //FileWithUsers(string fileNameWithUsers) :  FILE_NAME_WITH_USERS("Users.xml")  {};
-    //vector <Uzytkownik> wczytajUzytkownikowZPliku();
+    vector <User> loadUsersFromFile();
     //void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
 
 };
