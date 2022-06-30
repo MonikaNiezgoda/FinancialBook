@@ -2,10 +2,10 @@
 1656429792 source:c:\users\monika\documents\moniki\projekty c++\financialbook\user.cpp
 	"User.h"
 
-1656429792 c:\users\monika\documents\moniki\projekty c++\financialbook\user.h
+1656604488 c:\users\monika\documents\moniki\projekty c++\financialbook\user.h
 	<iostream>
 
-1303067212 source:c:\users\monika\documents\moniki\projekty c++\financialbook\markup.cpp
+1656603480 source:c:\users\monika\documents\moniki\projekty c++\financialbook\markup.cpp
 	<stdio.h>
 	"Markup.h"
 	<errno.h>
@@ -13,31 +13,40 @@
 	<windows.h>
 	<mbstring.h>
 
-1303067212 c:\users\monika\documents\moniki\projekty c++\financialbook\markup.h
+1656603480 c:\users\monika\documents\moniki\projekty c++\financialbook\markup.h
 	<stdlib.h>
 	<string.h>
 	<string>
 	<afx.h>
 
-1656602567 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
+1656603646 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
 	"FileWithUsers.h"
 
-1656429636 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.h
+1656604488 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.h
 	<iostream>
 	<vector>
 	<cstdlib>
 	"User.h"
 	"Markup.h"
 
-1656602256 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
+1656604506 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
 	<iostream>
 	"FileWithUsers.h"
 	"User.h"
+	"AuxiliaryMethods.h"
 
-1656601703 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
+1656604818 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
 	<iostream>
 	"UserMenager.h"
 
-1656602793 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
+1656604730 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
 	"UserMenager.h"
+
+1656604488 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
+	"AuxiliaryMethods.h"
+
+1656604488 c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.h
+	<iostream>
+	<sstream>
+	<algorithm>
 

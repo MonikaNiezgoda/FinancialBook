@@ -8,9 +8,10 @@ int main()
 {
     UserMenager userMenager;
 
-    userMenager.userRegistration();
-    userMenager.userRegistration();
-    userMenager.userRegistration();
-    userMenager.showAllUsers();
+    //userMenager.userRegistration();
+   // userMenager.userRegistration();
+    //userMenager.userRegistration();
+    //userMenager.showAllUsers();
+    userMenager.loginUser();
     return 0;
 }

@@ -4,6 +4,7 @@
 
 #include "FileWithUsers.h"
 #include "User.h"
+#include "AuxiliaryMethods.h"
 
 using namespace std;
 
@@ -14,6 +15,7 @@ class UserMenager
     vector <User> users;
     //const string FILE_NAME_WITH_USERS;
     FileWithUsers fileWithUsers;
+    AuxiliaryMethods auxiliaryMethods;
 
     int getNewUserId();
     bool isLoginExist(string login);
@@ -25,7 +27,7 @@ public:
     users = fileWithUsers.loadUsersFromFile();
     };
     void userRegistration();
-    //int logowanieUzytkownika();
+    int loginUser();
     //void zmianaHaslaZalogowanegoUzytkownika();
     //int wylogowanieUzytkownika();
     //void ustawIdZalogowanegoUzytkownika (int noweId);
