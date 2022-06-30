@@ -1,6 +1,6 @@
 #include "UserMenager.h"
 
-void UserMenager::userRegistration()
+void UserMenager::registerUser()
 {
     FileWithUsers fileWithUsers;
     User user = getNewUserData();

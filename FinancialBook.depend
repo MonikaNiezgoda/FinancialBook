@@ -29,17 +29,17 @@
 	"User.h"
 	"Markup.h"
 
-1656604506 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
+1656607322 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
 	<iostream>
 	"FileWithUsers.h"
 	"User.h"
 	"AuxiliaryMethods.h"
 
-1656604818 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
+1656607322 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
 	<iostream>
 	"UserMenager.h"
 
-1656604730 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
+1656607322 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
 	"UserMenager.h"
 
 1656604488 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
