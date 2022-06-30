@@ -19,7 +19,7 @@
 	<string>
 	<afx.h>
 
-1656429804 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
+1656602567 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
 	"FileWithUsers.h"
 
 1656429636 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.h
@@ -38,6 +38,6 @@
 	<iostream>
 	"UserMenager.h"
 
-1656602352 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
+1656602793 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
 	"UserMenager.h"
 
