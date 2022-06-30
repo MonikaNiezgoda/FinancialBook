@@ -13,6 +13,7 @@ class UserMenager
     int loggedInUserId;
     vector <User> users;
     //const string FILE_NAME_WITH_USERS;
+    FileWithUsers fileWithUsers;
 
     int getNewUserId();
     bool isLoginExist(string login);
@@ -21,7 +22,7 @@ class UserMenager
 public:
     UserMenager() /*: FILE_NAME_WITH_USERS(fileNameWithUsers)*/{
     loggedInUserId = 0;
-    //users = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+    users = fileWithUsers.loadUsersFromFile();
     };
     void userRegistration();
     //int logowanieUzytkownika();
@@ -30,6 +31,7 @@ public:
     //void ustawIdZalogowanegoUzytkownika (int noweId);
     int getLoggedInUserId ();
     bool isLoginExist();
+    void showAllUsers();
 };
 
 #endif

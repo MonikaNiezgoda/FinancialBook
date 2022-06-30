@@ -19,7 +19,7 @@
 	<string>
 	<afx.h>
 
-1656429447 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
+1656429804 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
 	"FileWithUsers.h"
 
 1656429636 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.h
@@ -29,15 +29,15 @@
 	"User.h"
 	"Markup.h"
 
-1656429792 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
+1656602256 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
 	<iostream>
 	"FileWithUsers.h"
 	"User.h"
 
-1656347118 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
+1656601703 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
 	<iostream>
 	"UserMenager.h"
 
-1656429792 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
+1656602352 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
 	"UserMenager.h"
 

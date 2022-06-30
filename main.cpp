@@ -9,5 +9,6 @@ int main()
     UserMenager userMenager;
 
     userMenager.userRegistration();
+    userMenager.showAllUsers();
     return 0;
 }
