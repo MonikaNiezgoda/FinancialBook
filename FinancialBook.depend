@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1656429792 source:c:\users\monika\documents\moniki\projekty c++\financialbook\user.cpp
+1656845182 source:c:\users\monika\documents\moniki\projekty c++\financialbook\user.cpp
 	"User.h"
 
-1656604488 c:\users\monika\documents\moniki\projekty c++\financialbook\user.h
+1656845182 c:\users\monika\documents\moniki\projekty c++\financialbook\user.h
 	<iostream>
 
 1656603480 source:c:\users\monika\documents\moniki\projekty c++\financialbook\markup.cpp
@@ -19,7 +19,7 @@
 	<string>
 	<afx.h>
 
-1656603646 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
+1656845182 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
 	"FileWithUsers.h"
 
 1656604488 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.h
@@ -29,24 +29,33 @@
 	"User.h"
 	"Markup.h"
 
-1656607322 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
+1656843196 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
 	<iostream>
 	"FileWithUsers.h"
 	"User.h"
 	"AuxiliaryMethods.h"
 
-1656607322 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
+1656843237 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
 	<iostream>
+	"FinancialBook.h"
+
+1656843196 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
 	"UserMenager.h"
 
-1656607322 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
-	"UserMenager.h"
-
-1656604488 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
+1656843196 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
 	"AuxiliaryMethods.h"
 
-1656604488 c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.h
+1656843195 c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.h
 	<iostream>
 	<sstream>
 	<algorithm>
+
+1656843196 source:c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.cpp
+	"FinancialBook.h"
+
+1656843196 c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.h
+	<iostream>
+	<vector>
+	"UserMenager.h"
+	"AuxiliaryMethods.h"
 

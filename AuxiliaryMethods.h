@@ -11,6 +11,7 @@ class AuxiliaryMethods
 {
 public:
     static string loadLine();
+    static char loadChar();
 };
 
 #endif

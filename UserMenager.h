@@ -27,7 +27,8 @@ public:
     users = fileWithUsers.loadUsersFromFile();
     };
     void registerUser();
-    int loginUser();
+    void loginUser();
+    bool isUserLoggedIn();
     //void zmianaHaslaZalogowanegoUzytkownika();
     //int wylogowanieUzytkownika();
     //void ustawIdZalogowanegoUzytkownika (int noweId);

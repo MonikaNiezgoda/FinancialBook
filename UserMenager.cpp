@@ -30,6 +30,16 @@ User UserMenager::getNewUserData()
     cin>>password;
     user.setPassword(password);
 
+    string name;
+    cout<<"Podaj imie: ";
+    cin>>name;
+    user.setName(name);
+
+    string surname;
+    cout<<"Podaj imie: ";
+    cin>>surname;
+    user.setSurname(surname);
+
     return user;
 }
 
@@ -54,7 +64,7 @@ bool UserMenager::isLoginExist(string login)
     }
 }
 
-int UserMenager::loginUser()
+void UserMenager::loginUser()
 {
     string login = "", password = "";
     system("cls");
@@ -76,21 +86,26 @@ int UserMenager::loginUser()
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     loggedInUserId=users[i].getID();
-                    return loggedInUserId;
+                    exit(0);
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-
-
-            return 0;
+           exit(0);
         }
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    return 0;
+    exit(0);
 }
 
+bool UserMenager::isUserLoggedIn()
+{
+    if(loggedInUserId > 0)
+        return true;
+    else
+        return false;
+}
 
 void UserMenager::showAllUsers()
 {

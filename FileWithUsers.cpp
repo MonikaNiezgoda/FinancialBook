@@ -18,6 +18,8 @@ void FileWithUsers::addUserToData(User user)
         xml.AddElem("UserId", user.getID() );
         xml.AddElem("Login", user.getLogin());
         xml.AddElem("Password", user.getPassword());
+        xml.AddElem("Name", user.getName());
+        xml.AddElem("Surname", user.getSurname());
 
         xml.Save(FILE_NAME_WITH_USERS);
     }
@@ -30,6 +32,8 @@ void FileWithUsers::addUserToData(User user)
         xml.AddElem("UserId", user.getID() );
         xml.AddElem("Login", user.getLogin());
         xml.AddElem("Password", user.getPassword());
+        xml.AddElem("Name", user.getName());
+        xml.AddElem("Surname", user.getSurname());
 
         xml.Save(FILE_NAME_WITH_USERS);
     }
@@ -59,6 +63,14 @@ vector <User> FileWithUsers::loadUsersFromFile()
             if(xml.FindElem("Password"))
             {
                 user.setPassword(xml.GetData());
+            }
+            if(xml.FindElem("Name"))
+            {
+                user.setName(xml.GetData());
+            }
+            if(xml.FindElem("Surname"))
+            {
+                user.setSurname(xml.GetData());
             }
             xml.OutOfElem();
         }

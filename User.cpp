@@ -5,6 +5,15 @@ void User::setID(int newID)
     if (newID >= 0)
     id = newID;
 }
+
+void User::setName(string newName)
+{
+    name=newName;
+}
+void User::setSurname(string newSurname)
+{
+    surname=newSurname;
+}
 void User::setLogin(string newLogin)
 {
     login=newLogin;
@@ -17,6 +26,16 @@ void User::setPassword(string newPassword)
 int User::getID()
 {
     return id;
+}
+
+string User::getName()
+{
+    return name;
+}
+
+string User::getSurname()
+{
+    return surname;
 }
 string User::getLogin()
 {
