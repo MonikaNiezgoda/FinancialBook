@@ -29,7 +29,7 @@
 	"User.h"
 	"Markup.h"
 
-1656843196 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
+1656946404 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
 	<iostream>
 	"FileWithUsers.h"
 	"User.h"
@@ -58,4 +58,10 @@
 	<vector>
 	"UserMenager.h"
 	"AuxiliaryMethods.h"
+
+1656946404 source:c:\users\monika\documents\moniki\projekty c++\financialbook\income.cpp
+	"Income.h"
+
+1656946404 c:\users\monika\documents\moniki\projekty c++\financialbook\income.h
+	<iostream>
 

@@ -117,4 +117,21 @@ void UserMenager::showAllUsers()
     }
 }
 
+void UserMenager::changePassword()
+{
+    string newPassword = "";
+    cout << "Podaj nowe haslo: ";
+    newPassword = auxiliaryMethods.loadLine();
+
+    for (int i=0; i<users.size();i++)
+    {
+        if (users[i].getID() == loggedInUserId)
+        {
+            users[i].setPassword(newPassword);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    //plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
 

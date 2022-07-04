@@ -29,7 +29,7 @@ public:
     void registerUser();
     void loginUser();
     bool isUserLoggedIn();
-    //void zmianaHaslaZalogowanegoUzytkownika();
+    void changePassword();
     //int wylogowanieUzytkownika();
     //void ustawIdZalogowanegoUzytkownika (int noweId);
     int getLoggedInUserId ();
