@@ -10,7 +10,7 @@ void FileWithIncomes::addIncome()
     income = getNewIncomeData();
 
     incomes.push_back(income);
-    if (plikZAdresatami.dopiszAdresataDoPliku(adresat)) // dopisa� do pliku z przychodami
+    if (addIncomeToFile(income)) // dopisaæ do pliku z przychodami
         cout << "Nowy przychod zostal dodany" << endl;
     else
         cout << "Blad. Nie udalo sie dodac nowego przychodu."<< endl;
@@ -24,8 +24,9 @@ Income FileWithIncomes::getNewIncomeData()
 
     //adresat.ustawId( (plikZAdresatami.pobierzIdOstatniegoAdresata()+1) );
     income.setUserId(LOGGED_IN_USER_ID);
+    income.setIncomeId(1);
 
-    string data;
+    string date;
     cout << "Czy przychod z dnia dzisiejszego:";
     cout << endl << "Wcisnij 't' jesli tak, wcisnij 'n' jesli data jest inna: ";
             sign = auxiliaryMethods.loadChar();
@@ -35,25 +36,103 @@ Income FileWithIncomes::getNewIncomeData()
             }
             if(sign=='n')
             {
-                date = auxiliaryMethods.loadLine();
+                date = auxiliaryMethods.loadLine()+'-';
+                //dateInt=convertDateToInteger(date);
             }
+            income.setDate(convertDateToInteger(date));
 
+    string item;
+    cout << "Podaj rodzaj przychodu: ";
+    item = auxiliaryMethods.loadLine();
+    income.setItem(item);// czy zamieniac pierwsza litere na duza?
 
-    adresat.ustawImie(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(imie));
+    cout << "Podaj wartosc: ";
+//    income.setAmount(auxiliaryMethods.loadLine()); //zmiana wartosci na z kropką
+    return income;
+}
 
-    string nazwisko;
-    cout << "Podaj nazwisko: ";
-    nazwisko = metodyPomocnicze.wczytajLinie();
-    adresat.ustawNazwisko(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwisko));
+unsigned int FileWithIncomes::convertDateToInteger(string date)
+{
+    AuxiliaryMethods auxiliaryMethods;
+    unsigned int dateInt;
+    int  year, month, day;
+    string singlePartDate = "";
+    int numberSinglePartDate = 1;
 
-    cout << "Podaj numer telefonu: ";
-    adresat.ustawNumerTelefonu(metodyPomocnicze.wczytajLinie());
+    for (int signPosition = 0; signPosition < date.length(); signPosition++)
+    {
+        if (date[signPosition] != '-')
+        {
+            singlePartDate += date[signPosition];
+        }
+         else
+        {
+            switch(numberSinglePartDate)
+            {
+            case 1:
+                {
+                year=auxiliaryMethods.convertStringToInteger(singlePartDate);
+                break;
+                }
 
-    cout << "Podaj email: ";
-    adresat.ustawEmail(metodyPomocnicze.wczytajLinie());
+            case 2:
+                {
+                month=auxiliaryMethods.convertStringToInteger(singlePartDate);
+                break;
+                }
+            case 3:
+                {
+                day=auxiliaryMethods.convertStringToInteger(singlePartDate);
+                break;
+                }
+            }
+            singlePartDate = "";
+            numberSinglePartDate++;
+        }
+    }
+    dateInt=year*10000+month*100+day;
+    return dateInt;
+}
 
-    cout << "Podaj adres: ";
-    adresat.ustawAdres(metodyPomocnicze.wczytajLinie());
+bool FileWithIncomes::addIncomeToFile(Income income)
+{
+    CMarkup xml;
 
-    return adresat;
+    bool fileExists = xml.Load(FILE_NAME_WITH_INCOMES);
+
+    if (!fileExists)
+    {
+        xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
+        xml.AddElem("Incomes");
+        xml.FindElem();
+        xml.IntoElem();
+        xml.AddElem("Income");
+        xml.IntoElem();
+        xml.AddElem("IncomeId", income.getIncomeId());
+        xml.AddElem("UserId", income.getUserId());
+        xml.AddElem("Date", income.getDate());
+        xml.AddElem("Item", income.getItem());
+        xml.AddElem("Amount", income.getAmount());
+
+        xml.Save(FILE_NAME_WITH_INCOMES);
+        return true;
+    }
+    if(fileExists)
+    {
+         xml.FindElem();
+        xml.IntoElem();
+        xml.AddElem("Income");
+        xml.IntoElem();
+        xml.AddElem("IncomeId", income.getIncomeId());
+        xml.AddElem("UserId", income.getUserId());
+        xml.AddElem("Date", income.getDate());
+        xml.AddElem("Item", income.getItem());
+        xml.AddElem("Amount", income.getAmount());
+
+        xml.Save(FILE_NAME_WITH_INCOMES);
+        return true;
+    }
+    else
+        cout << "Nie udalo sie otworzyc pliku " << FILE_NAME_WITH_INCOMES << " i zapisac w nim danych." << endl;
+        return false;
 }

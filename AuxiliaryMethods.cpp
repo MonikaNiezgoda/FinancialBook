@@ -24,6 +24,14 @@ char AuxiliaryMethods::loadChar()
         else
             cout << "To nie jest pojedynczy znak. Wpisz ponownie." << endl;
     }
-
     return sign;
+}
+
+int AuxiliaryMethods::convertStringToInteger(string number)
+{
+    int numberInt;
+    istringstream iss(number);
+    iss >> numberInt;
+
+    return numberInt;
 }

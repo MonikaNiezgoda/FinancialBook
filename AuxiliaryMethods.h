@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <sstream>
-#include <algorithm>
-
+//#include <algorithm>
+#include <cstdlib>
 using namespace std;
 
 class AuxiliaryMethods
@@ -12,6 +12,7 @@ class AuxiliaryMethods
 public:
     static string loadLine();
     static char loadChar();
+    static int convertStringToInteger(string number);
 };
 
 #endif
