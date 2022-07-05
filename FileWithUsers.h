@@ -18,7 +18,7 @@ class FileWithUsers
 
  public:
 
-    void addUserToData(User user);
+    void addUserToFile(User user);
     //FileWithUsers(string fileNameWithUsers) :  FILE_NAME_WITH_USERS("Users.xml")  {};
     vector <User> loadUsersFromFile();
     //void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);

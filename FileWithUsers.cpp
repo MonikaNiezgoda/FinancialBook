@@ -1,7 +1,7 @@
 #include "FileWithUsers.h"
 
 
-void FileWithUsers::addUserToData(User user)
+void FileWithUsers::addUserToFile(User user)
 {
     CMarkup xml;
 
