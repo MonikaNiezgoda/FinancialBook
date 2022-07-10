@@ -50,10 +50,10 @@
 	<sstream>
 	<cstdlib>
 
-1657127677 source:c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.cpp
+1657482076 source:c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.cpp
 	"FinancialBook.h"
 
-1657126457 c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.h
+1657482060 c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.h
 	<iostream>
 	<vector>
 	"UserMenager.h"
@@ -66,10 +66,10 @@
 1657480181 c:\users\monika\documents\moniki\projekty c++\financialbook\income.h
 	<iostream>
 
-1657479237 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
+1657481958 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
 	"FileWithIncomes.h"
 
-1657481195 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
+1657481958 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
 	<iostream>
 	<vector>
 	<sstream>

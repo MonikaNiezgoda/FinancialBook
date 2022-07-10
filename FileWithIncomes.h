@@ -28,6 +28,7 @@ class FileWithIncomes
     unsigned int convertDateToInteger(string date);
     bool addIncomeToFile(Income income);
     vector <Income> loadIncomesLoggedInUser(int loggedInUserId);
+    void showIncomeData(Income income);
 
 public:
   FileWithIncomes (string fileNameWithIncomes, int loggedInUserId) : FILE_NAME_WITH_INCOMES(fileNameWithIncomes), LOGGED_IN_USER_ID(loggedInUserId)
@@ -35,5 +36,6 @@ public:
         incomes = loadIncomesLoggedInUser(LOGGED_IN_USER_ID);
         };
         void addIncome();
+        void showAllIncomes();
 };
 #endif

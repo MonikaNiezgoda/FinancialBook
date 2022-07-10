@@ -14,4 +14,11 @@
 <Item>przychod1</Item>
 <Amount>300,00</Amount>
 </Income>
+<Income>
+<UserId>1</UserId>
+<IncomeId>1</IncomeId>
+<Date>2022-07-10</Date>
+<Item>takie</Item>
+<Amount>200,00</Amount>
+</Income>
 </Incomes>
