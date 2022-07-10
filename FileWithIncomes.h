@@ -7,19 +7,21 @@
 //#include <cstdlib>
 
 #include "Income.h"
-#include "UserMenager.h"
+//#include "UserMenager.h"
 #include "AuxiliaryMethods.h"
 #include "Markup.h"
+#include "Dates.h"
 
 using namespace std;
 
 class FileWithIncomes
 {
-    const string FILE_NAME_WITH_INCOMES="Incomes.xml";
+    const string FILE_NAME_WITH_INCOMES;
     const int LOGGED_IN_USER_ID;
     vector <Income> incomes;
-    UserMenager userMenager;
+    //UserMenager userMenager;
     AuxiliaryMethods auxiliaryMethods;
+    Dates dates;
 
     void getIncomeData();
     Income getNewIncomeData();
@@ -27,11 +29,10 @@ class FileWithIncomes
     bool addIncomeToFile(Income income);
 
 public:
-  /*  FileWithIncomes
+  FileWithIncomes (string fileNameWithIncomes, int loggedInUserId) : FILE_NAME_WITH_INCOMES(fileNameWithIncomes), LOGGED_IN_USER_ID(loggedInUserId)
         {
         //adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
-        LOGGED_IN_USER_ID=userMenager.getLoggedInUserId();
-        };*/
+        };
         void addIncome();
 };
 #endif

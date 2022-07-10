@@ -7,4 +7,11 @@
 <Name>Monika</Name>
 <Surname>Niezgoda</Surname>
 </User>
+<User>
+<UserId>2</UserId>
+<Login>natka</Login>
+<Password>wariatka</Password>
+<Name>Natalia</Name>
+<Surname>Brzozowska</Surname>
+</User>
 </Users>

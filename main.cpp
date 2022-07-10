@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    FinancialBook financialBook;
+    FinancialBook financialBook("Incomes.xml");
     char select;
     while (true)
     {
@@ -21,6 +21,7 @@ int main()
                 break;
             case '2':
                 financialBook.loginUser();
+                financialBook.addIncome();
                 break;
             case '9':
                 exit(0);

@@ -27,12 +27,12 @@ public:
     users = fileWithUsers.loadUsersFromFile();
     };
     void registerUser();
-    void loginUser();
+    int loginUser();
     bool isUserLoggedIn();
     void changePassword();
     //int wylogowanieUzytkownika();
     //void ustawIdZalogowanegoUzytkownika (int noweId);
-    int getLoggedInUserId ();
+    int getLoggedInUserId();
     bool isLoginExist();
     void showAllUsers();
 };

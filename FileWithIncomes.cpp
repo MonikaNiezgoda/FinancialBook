@@ -30,16 +30,18 @@ Income FileWithIncomes::getNewIncomeData()
     cout << "Czy przychod z dnia dzisiejszego:";
     cout << endl << "Wcisnij 't' jesli tak, wcisnij 'n' jesli data jest inna: ";
             sign = auxiliaryMethods.loadChar();
-            if (sign == 't')
+           if (sign == 't')
             {
-                //metoda pobranie dzisiejszej daty
+                cout<<"Dzisiejsza data to: ";
+                date=dates.getTimeStr();
+                cout<<date<<endl;
             }
             if(sign=='n')
             {
+                cout<<"Podaj date: "; // jak sprawdzić czy data jest dobrze wpisana??
                 date = auxiliaryMethods.loadLine()+'-';
-                //dateInt=convertDateToInteger(date);
             }
-            income.setDate(convertDateToInteger(date));
+            income.setDate(date);
 
     string item;
     cout << "Podaj rodzaj przychodu: ";
@@ -47,7 +49,7 @@ Income FileWithIncomes::getNewIncomeData()
     income.setItem(item);// czy zamieniac pierwsza litere na duza?
 
     cout << "Podaj wartosc: ";
-//    income.setAmount(auxiliaryMethods.loadLine()); //zmiana wartosci na z kropką
+     income.setAmount(auxiliaryMethods.loadLine()); //zmiana wartosci na z kropką
     return income;
 }
 

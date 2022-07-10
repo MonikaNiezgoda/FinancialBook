@@ -64,7 +64,7 @@ bool UserMenager::isLoginExist(string login)
     }
 }
 
-void UserMenager::loginUser()
+int UserMenager::loginUser()
 {
     string login = "", password = "";
     system("cls");
@@ -86,17 +86,17 @@ void UserMenager::loginUser()
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     loggedInUserId=users[i].getID();
-                    exit(0);
+                    return loggedInUserId;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-           exit(0);
+           return 0;
         }
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    exit(0);
+    return 0;
 }
 
 bool UserMenager::isUserLoggedIn()
@@ -135,3 +135,7 @@ void UserMenager::changePassword()
     //plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
 
+int UserMenager::getLoggedInUserId()
+{
+    return loggedInUserId;
+}

@@ -8,21 +8,21 @@ class Income
 {
     int incomeId;
     int userId;
-    unsigned int date;
+    string date;
     string item;
-    double amount;
+    string amount;
 
 public:
     void setIncomeId(int newIncomeId);
     void setUserId(int newUserId);
-    void setDate(unsigned int newDate);
+    void setDate(string newDate);
     void setItem(string newItem);
-    void setAmount(double newAmount);
+    void setAmount(string newAmount);
 
     int getIncomeId();
     int getUserId();
-    unsigned int getDate();
+    string getDate();
     string getItem();
-    double getAmount();
+    string getAmount();
 };
 #endif
