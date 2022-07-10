@@ -27,11 +27,12 @@ class FileWithIncomes
     Income getNewIncomeData();
     unsigned int convertDateToInteger(string date);
     bool addIncomeToFile(Income income);
+    vector <Income> loadIncomesLoggedInUser(int loggedInUserId);
 
 public:
   FileWithIncomes (string fileNameWithIncomes, int loggedInUserId) : FILE_NAME_WITH_INCOMES(fileNameWithIncomes), LOGGED_IN_USER_ID(loggedInUserId)
         {
-        //adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+        incomes = loadIncomesLoggedInUser(LOGGED_IN_USER_ID);
         };
         void addIncome();
 };

@@ -110,8 +110,8 @@ bool FileWithIncomes::addIncomeToFile(Income income)
         xml.IntoElem();
         xml.AddElem("Income");
         xml.IntoElem();
-        xml.AddElem("IncomeId", income.getIncomeId());
         xml.AddElem("UserId", income.getUserId());
+        xml.AddElem("IncomeId", income.getIncomeId());
         xml.AddElem("Date", income.getDate());
         xml.AddElem("Item", income.getItem());
         xml.AddElem("Amount", income.getAmount());
@@ -125,8 +125,8 @@ bool FileWithIncomes::addIncomeToFile(Income income)
         xml.IntoElem();
         xml.AddElem("Income");
         xml.IntoElem();
-        xml.AddElem("IncomeId", income.getIncomeId());
         xml.AddElem("UserId", income.getUserId());
+        xml.AddElem("IncomeId", income.getIncomeId());
         xml.AddElem("Date", income.getDate());
         xml.AddElem("Item", income.getItem());
         xml.AddElem("Amount", income.getAmount());
@@ -137,4 +137,42 @@ bool FileWithIncomes::addIncomeToFile(Income income)
     else
         cout << "Nie udalo sie otworzyc pliku " << FILE_NAME_WITH_INCOMES << " i zapisac w nim danych." << endl;
         return false;
+}
+
+vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
+{
+    Income income;
+    vector <Income> incomes;
+    CMarkup xml;
+    xml.Load( FILE_NAME_WITH_INCOMES);
+    xml.FindElem();
+    xml.IntoElem();
+
+    while(xml.FindElem("Income"))
+    {
+        xml.IntoElem();
+        if (LOGGED_IN_USER_ID==xml.FindElem("UserId"))
+        {
+            income.setUserId(atoi(xml.GetData().c_str()));   //atoi(pojedynczaDanaUzytkownika.c_str())
+            if(xml.FindElem("IncomeId"))
+            {
+                income.setIncomeId(atoi(xml.GetData().c_str()));
+            }
+            if(xml.FindElem("Date"))
+            {
+                income.setDate(xml.GetData());
+            }
+            if(xml.FindElem("Item"))
+            {
+                income.setItem(xml.GetData());
+            }
+            if(xml.FindElem("Amount"))
+            {
+                income.setAmount(xml.GetData());
+            }
+            xml.OutOfElem();
+        }
+        incomes.push_back(income);
+    }
+    return incomes;
 }
