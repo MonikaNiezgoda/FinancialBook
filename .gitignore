@@ -3,3 +3,6 @@ bin/
 Users.xml
 Debug/
 FinancialBook.*
+Incomes.xml
+*.depend
+*.exe
