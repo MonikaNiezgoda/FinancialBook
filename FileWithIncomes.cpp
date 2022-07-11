@@ -23,8 +23,8 @@ Income FileWithIncomes::getNewIncomeData()
     char sign;
 
     //adresat.ustawId( (plikZAdresatami.pobierzIdOstatniegoAdresata()+1) );
+    income.setIncomeId(lastIncomeId);
     income.setUserId(LOGGED_IN_USER_ID);
-    income.setIncomeId(1);
 
     string date;
     cout << "Czy przychod z dnia dzisiejszego:";
@@ -174,6 +174,8 @@ vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
         }
         incomes.push_back(income);
     }
+    lastIncomeId=incomes.size();
+
     return incomes;
 }
 
@@ -195,6 +197,7 @@ void FileWithIncomes::showAllIncomes()
         cout << endl << "Spis przychodow jest pusty." << endl << endl;
     }
     system("pause");
+
 }
 
 void FileWithIncomes::showIncomeData(Income income)

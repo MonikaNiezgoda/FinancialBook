@@ -36,7 +36,7 @@ User UserMenager::getNewUserData()
     user.setName(name);
 
     string surname;
-    cout<<"Podaj imie: ";
+    cout<<"Podaj nazwisko: ";
     cin>>surname;
     user.setSurname(surname);
 

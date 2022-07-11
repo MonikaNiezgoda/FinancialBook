@@ -19,7 +19,7 @@ class FileWithIncomes
     const string FILE_NAME_WITH_INCOMES;
     const int LOGGED_IN_USER_ID;
     vector <Income> incomes;
-    //UserMenager userMenager;
+    int lastIncomeId;
     AuxiliaryMethods auxiliaryMethods;
     Dates dates;
 
