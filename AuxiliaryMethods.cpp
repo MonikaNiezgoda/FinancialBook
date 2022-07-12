@@ -35,3 +35,11 @@ int AuxiliaryMethods::convertStringToInteger(string number)
 
     return numberInt;
 }
+
+string AuxiliaryMethods::konwerjsaIntNaString(int liczba)
+{
+    ostringstream ss;
+    ss << liczba;
+    string str = ss.str();
+    return str;
+}

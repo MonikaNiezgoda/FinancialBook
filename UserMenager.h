@@ -31,8 +31,8 @@ public:
     bool isUserLoggedIn();
     void changePassword();
     //int wylogowanieUzytkownika();
-    //void ustawIdZalogowanegoUzytkownika (int noweId);
     int getLoggedInUserId();
+    void setLoggedInUserId(int newId);
     bool isLoginExist();
     void showAllUsers();
 };

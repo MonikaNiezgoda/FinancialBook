@@ -29,19 +29,19 @@ Income FileWithIncomes::getNewIncomeData()
     string date;
     cout << "Czy przychod z dnia dzisiejszego:";
     cout << endl << "Wcisnij 't' jesli tak, wcisnij 'n' jesli data jest inna: ";
-            sign = auxiliaryMethods.loadChar();
-           if (sign == 't')
-            {
-                cout<<"Dzisiejsza data to: ";
-                date=dates.getTimeStr();
-                cout<<date<<endl;
-            }
-            if(sign=='n')
-            {
-                cout<<"Podaj date: "; // jak sprawdzić czy data jest dobrze wpisana??
-                date = auxiliaryMethods.loadLine()+'-';
-            }
-            income.setDate(date);
+    sign = auxiliaryMethods.loadChar();
+    if (sign == 't')
+    {
+        cout<<"Dzisiejsza data to: ";
+        date=dates.getTimeStr();
+        cout<<date<<endl;
+    }
+    if(sign=='n')
+    {
+        cout<<"Podaj date: "; // jak sprawdzić czy data jest dobrze wpisana??
+        date = auxiliaryMethods.loadLine()+'-';
+    }
+    income.setDate(date);
 
     string item;
     cout << "Podaj rodzaj przychodu: ";
@@ -49,7 +49,7 @@ Income FileWithIncomes::getNewIncomeData()
     income.setItem(item);// czy zamieniac pierwsza litere na duza?
 
     cout << "Podaj wartosc: ";
-     income.setAmount(auxiliaryMethods.loadLine()); //zmiana wartosci na z kropką
+    income.setAmount(auxiliaryMethods.loadLine()); //zmiana wartosci na z kropką
     return income;
 }
 
@@ -67,26 +67,26 @@ unsigned int FileWithIncomes::convertDateToInteger(string date)
         {
             singlePartDate += date[signPosition];
         }
-         else
+        else
         {
             switch(numberSinglePartDate)
             {
             case 1:
-                {
+            {
                 year=auxiliaryMethods.convertStringToInteger(singlePartDate);
                 break;
-                }
+            }
 
             case 2:
-                {
+            {
                 month=auxiliaryMethods.convertStringToInteger(singlePartDate);
                 break;
-                }
+            }
             case 3:
-                {
+            {
                 day=auxiliaryMethods.convertStringToInteger(singlePartDate);
                 break;
-                }
+            }
             }
             singlePartDate = "";
             numberSinglePartDate++;
@@ -111,6 +111,7 @@ bool FileWithIncomes::addIncomeToFile(Income income)
         xml.AddElem("Income");
         xml.IntoElem();
         xml.AddElem("UserId", income.getUserId());
+        //xml.IntoElem();
         xml.AddElem("IncomeId", income.getIncomeId());
         xml.AddElem("Date", income.getDate());
         xml.AddElem("Item", income.getItem());
@@ -121,11 +122,12 @@ bool FileWithIncomes::addIncomeToFile(Income income)
     }
     if(fileExists)
     {
-         xml.FindElem();
+        xml.FindElem();
         xml.IntoElem();
         xml.AddElem("Income");
         xml.IntoElem();
         xml.AddElem("UserId", income.getUserId());
+        //xml.IntoElem();
         xml.AddElem("IncomeId", income.getIncomeId());
         xml.AddElem("Date", income.getDate());
         xml.AddElem("Item", income.getItem());
@@ -136,7 +138,7 @@ bool FileWithIncomes::addIncomeToFile(Income income)
     }
     else
         cout << "Nie udalo sie otworzyc pliku " << FILE_NAME_WITH_INCOMES << " i zapisac w nim danych." << endl;
-        return false;
+    return false;
 }
 
 vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
@@ -144,35 +146,42 @@ vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
     Income income;
     vector <Income> incomes;
     CMarkup xml;
-    xml.Load( FILE_NAME_WITH_INCOMES);
+    xml.Load(FILE_NAME_WITH_INCOMES);
     xml.FindElem();
     xml.IntoElem();
 
     while(xml.FindElem("Income"))
     {
         xml.IntoElem();
-        if (LOGGED_IN_USER_ID==xml.FindElem("UserId"))
+
+        if(xml.FindElem("UserId"))
         {
-            income.setUserId(atoi(xml.GetData().c_str()));   //atoi(pojedynczaDanaUzytkownika.c_str())
-            if(xml.FindElem("IncomeId"))
+            while(LOGGED_IN_USER_ID==auxiliaryMethods.convertStringToInteger(xml.GetData()))
             {
-                income.setIncomeId(atoi(xml.GetData().c_str()));
-            }
-            if(xml.FindElem("Date"))
-            {
-                income.setDate(xml.GetData());
-            }
-            if(xml.FindElem("Item"))
-            {
-                income.setItem(xml.GetData());
-            }
-            if(xml.FindElem("Amount"))
-            {
-                income.setAmount(xml.GetData());
+                income.setUserId(atoi(xml.GetData().c_str()));   //atoi(pojedynczaDanaUzytkownika.c_str())
+                if(xml.FindElem("IncomeId"))
+                {
+                    income.setIncomeId(atoi(xml.GetData().c_str()));
+                }
+                if(xml.FindElem("Date"))
+                {
+                    income.setDate(xml.GetData());
+                }
+                if(xml.FindElem("Item"))
+                {
+                    income.setItem(xml.GetData());
+                }
+                if(xml.FindElem("Amount"))
+                {
+                    income.setAmount(xml.GetData());
+                }
+                incomes.push_back(income);
             }
             xml.OutOfElem();
+
         }
-        incomes.push_back(income);
+
+
     }
     lastIncomeId=incomes.size();
 

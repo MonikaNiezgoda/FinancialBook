@@ -139,3 +139,8 @@ int UserMenager::getLoggedInUserId()
 {
     return loggedInUserId;
 }
+
+void UserMenager::setLoggedInUserId(int newId)
+{
+    loggedInUserId = newId;
+}

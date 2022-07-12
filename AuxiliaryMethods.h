@@ -13,6 +13,7 @@ public:
     static string loadLine();
     static char loadChar();
     static int convertStringToInteger(string number);
+    static string konwerjsaIntNaString(int numer);
 };
 
 #endif
