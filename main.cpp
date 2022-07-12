@@ -21,10 +21,12 @@ int main()
                 break;
             case '2':
                 financialBook.loginUser();
-                financialBook.showAllIncomes();
+                //financialBook.showAllIncomes();
                 financialBook.addIncome();
 
-                //financialBook.showAllIncomes();
+                financialBook.showAllIncomes();
+                financialBook.addIncome();
+                financialBook.showAllIncomes();
                 break;
             case '9':
                 exit(0);

@@ -23,7 +23,8 @@ Income FileWithIncomes::getNewIncomeData()
     char sign;
 
     //adresat.ustawId( (plikZAdresatami.pobierzIdOstatniegoAdresata()+1) );
-    income.setIncomeId(lastIncomeId);
+    income.setIncomeId(lastIncomeId+1);
+    lastIncomeId=income.getIncomeId();
     income.setUserId(LOGGED_IN_USER_ID);
 
     string date;
@@ -111,7 +112,6 @@ bool FileWithIncomes::addIncomeToFile(Income income)
         xml.AddElem("Income");
         xml.IntoElem();
         xml.AddElem("UserId", income.getUserId());
-        //xml.IntoElem();
         xml.AddElem("IncomeId", income.getIncomeId());
         xml.AddElem("Date", income.getDate());
         xml.AddElem("Item", income.getItem());
@@ -127,7 +127,6 @@ bool FileWithIncomes::addIncomeToFile(Income income)
         xml.AddElem("Income");
         xml.IntoElem();
         xml.AddElem("UserId", income.getUserId());
-        //xml.IntoElem();
         xml.AddElem("IncomeId", income.getIncomeId());
         xml.AddElem("Date", income.getDate());
         xml.AddElem("Item", income.getItem());
@@ -178,10 +177,7 @@ vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
                 incomes.push_back(income);
             }
             xml.OutOfElem();
-
         }
-
-
     }
     lastIncomeId=incomes.size();
 

@@ -35,7 +35,7 @@
 	"User.h"
 	"AuxiliaryMethods.h"
 
-1657633950 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
+1657636402 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
 	<iostream>
 	"FinancialBook.h"
 
@@ -66,10 +66,10 @@
 1657480181 c:\users\monika\documents\moniki\projekty c++\financialbook\income.h
 	<iostream>
 
-1657634422 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
+1657636796 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
 	"FileWithIncomes.h"
 
-1657565799 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
+1657635948 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
 	<iostream>
 	<vector>
 	<sstream>
