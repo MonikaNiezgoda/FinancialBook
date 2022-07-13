@@ -10,6 +10,7 @@ class Dates
 {
 public:
     string getTimeStr();
+    bool checkDateFormat (string date);
 };
 
 #endif

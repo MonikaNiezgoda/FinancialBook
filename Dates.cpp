@@ -7,3 +7,17 @@ string Dates::getTimeStr(){
     strftime(&s[0], s.size(), "%Y-%m-%d", localtime(&now));
     return s;
 }
+
+
+bool Dates::checkDateFormat (string date)
+{
+    if (date[4]!='-' || date[7]!='-' || date.length()!=10)
+    {
+        cout<<"Niepoprawny format daty"<<endl;
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}

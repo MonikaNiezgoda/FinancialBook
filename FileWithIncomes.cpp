@@ -22,7 +22,6 @@ Income FileWithIncomes::getNewIncomeData()
     Income income;
     char sign;
 
-    //adresat.ustawId( (plikZAdresatami.pobierzIdOstatniegoAdresata()+1) );
     income.setIncomeId(lastIncomeId+1);
     lastIncomeId=income.getIncomeId();
     income.setUserId(LOGGED_IN_USER_ID);
@@ -40,7 +39,12 @@ Income FileWithIncomes::getNewIncomeData()
     if(sign=='n')
     {
         cout<<"Podaj date: "; // jak sprawdzić czy data jest dobrze wpisana??
-        date = auxiliaryMethods.loadLine()+'-';
+        date = auxiliaryMethods.loadLine();
+        while (!dates.checkDateFormat(date))
+        {
+            cout<<"Wpisz jeszcze raz date w poprawnym formacie rrrr-mm-dd: ";
+            date=auxiliaryMethods.loadLine();
+        }
     }
     income.setDate(date);
 
