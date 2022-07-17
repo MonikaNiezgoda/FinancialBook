@@ -5,10 +5,7 @@
 #include <cstdlib>
 
 #include "User.h"
-//#include "UserMenager.h"
 #include "Markup.h"
-//#include "MetodyPomocnicze.h"
-//#include "PlikTekstowy.h"
 
 using namespace std;
 

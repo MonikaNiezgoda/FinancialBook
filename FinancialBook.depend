@@ -22,38 +22,38 @@
 1657472841 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
 	"FileWithUsers.h"
 
-1657472841 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.h
+1658073167 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.h
 	<iostream>
 	<vector>
 	<cstdlib>
 	"User.h"
 	"Markup.h"
 
-1657567080 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
+1657739972 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
 	<iostream>
 	"FileWithUsers.h"
 	"User.h"
 	"AuxiliaryMethods.h"
 
-1657636402 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
+1658073728 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
 	<iostream>
 	"FinancialBook.h"
 
-1657567173 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
+1658074726 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
 	"UserMenager.h"
 
-1657568023 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
+1657739972 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
 	"AuxiliaryMethods.h"
 
-1657568022 c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.h
+1657739972 c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.h
 	<iostream>
 	<sstream>
 	<cstdlib>
 
-1657632175 source:c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.cpp
+1658074829 source:c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.cpp
 	"FinancialBook.h"
 
-1657482060 c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.h
+1658074829 c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.h
 	<iostream>
 	<vector>
 	"UserMenager.h"
@@ -66,10 +66,10 @@
 1657480181 c:\users\monika\documents\moniki\projekty c++\financialbook\income.h
 	<iostream>
 
-1657636796 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
+1657739972 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
 	"FileWithIncomes.h"
 
-1657635948 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
+1657739972 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
 	<iostream>
 	<vector>
 	<sstream>
@@ -78,10 +78,10 @@
 	"Markup.h"
 	"Dates.h"
 
-1657739298 source:c:\users\monika\documents\moniki\projekty c++\financialbook\dates.cpp
+1657739972 source:c:\users\monika\documents\moniki\projekty c++\financialbook\dates.cpp
 	"Dates.h"
 
-1657739298 c:\users\monika\documents\moniki\projekty c++\financialbook\dates.h
+1657739972 c:\users\monika\documents\moniki\projekty c++\financialbook\dates.h
 	<iostream>
 	<chrono>
 	<ctime>

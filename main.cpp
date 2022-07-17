@@ -21,12 +21,6 @@ int main()
                 break;
             case '2':
                 financialBook.loginUser();
-                //financialBook.showAllIncomes();
-                financialBook.addIncome();
-
-                financialBook.showAllIncomes();
-                financialBook.addIncome();
-                financialBook.showAllIncomes();
                 break;
             case '9':
                 exit(0);
@@ -35,6 +29,15 @@ int main()
                 cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
                 system("pause");
                 break;
+            }
+        }
+            else
+        {
+            select = financialBook.selectOptionFromUserMenu();
+            switch (select)
+            {
+            case '1':
+                financialBook.addIncome();
             }
         }
     }

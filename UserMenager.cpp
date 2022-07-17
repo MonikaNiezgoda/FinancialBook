@@ -23,7 +23,7 @@ User UserMenager::getNewUserData()
         cin>>login;
         user.setLogin(login);
     }
-    while(isLoginExist(user.getLogin())==true);
+    while(isLoginExist(user.getLogin()));
 
     string password;
     cout<<"Podaj haslo: ";
@@ -60,8 +60,8 @@ bool UserMenager::isLoginExist(string login)
             cout << endl << "Istnieje uzytkownik o takim loginie." << endl;
             return true;
         }
-        return false;
     }
+    return false;
 }
 
 int UserMenager::loginUser()

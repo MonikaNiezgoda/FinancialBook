@@ -42,4 +42,11 @@
 <Item>blaa</Item>
 <Amount>215,0</Amount>
 </Income>
+<Income>
+<UserId>2</UserId>
+<IncomeId>2</IncomeId>
+<Date>2022-07-17</Date>
+<Item>ohoh</Item>
+<Amount>100,00</Amount>
+</Income>
 </Incomes>
