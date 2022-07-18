@@ -21,3 +21,61 @@ bool Dates::checkDateFormat (string date)
         return true;
     }
 }
+
+int Dates::convertDateToInteger(string date)
+{
+    AuxiliaryMethods auxiliaryMethods;
+    unsigned int dateInt;
+    int  year, month, day;
+    string singlePartDate = "";
+    int numberSinglePartDate = 1;
+
+    for (int signPosition = 0; signPosition < date.length(); signPosition++)
+    {
+        if (date[signPosition] != '-')
+        {
+            singlePartDate += date[signPosition];
+        }
+        else
+        {
+            switch(numberSinglePartDate)
+            {
+            case 1:
+            {
+                year=auxiliaryMethods.convertStringToInteger(singlePartDate);
+                break;
+            }
+
+            case 2:
+            {
+                month=auxiliaryMethods.convertStringToInteger(singlePartDate);
+                break;
+            }
+            case 3:
+            {
+                day=auxiliaryMethods.convertStringToInteger(singlePartDate);
+                break;
+            }
+            }
+            singlePartDate = "";
+            numberSinglePartDate++;
+        }
+    }
+    dateInt=year*10000+month*100+day;
+    return dateInt;
+}
+
+bool Dates::checkStartDate (string date)
+{
+    int dateInt;
+    dateInt=convertDateToInteger(date+'-');
+    if (dateInt<20000101)
+    {
+        cout<<"Niepoprawna data"<<endl;
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}

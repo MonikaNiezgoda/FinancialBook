@@ -21,6 +21,7 @@ Income FileWithIncomes::getNewIncomeData()
 {
     Income income;
     char sign;
+    int dateInt;
 
     income.setIncomeId(lastIncomeId+1);
     lastIncomeId=income.getIncomeId();
@@ -45,6 +46,11 @@ Income FileWithIncomes::getNewIncomeData()
             cout<<"Wpisz jeszcze raz date w poprawnym formacie rrrr-mm-dd: ";
             date=auxiliaryMethods.loadLine();
         }
+        while(!dates.checkStartDate(date))
+        {
+            cout<<"Data musi byc pozniejsza niz 2000-01-01. Wpisz date ponownie: ";
+            date=auxiliaryMethods.loadLine();
+        }
     }
     income.setDate(date);
 
@@ -58,48 +64,6 @@ Income FileWithIncomes::getNewIncomeData()
     return income;
 }
 
-unsigned int FileWithIncomes::convertDateToInteger(string date)
-{
-    AuxiliaryMethods auxiliaryMethods;
-    unsigned int dateInt;
-    int  year, month, day;
-    string singlePartDate = "";
-    int numberSinglePartDate = 1;
-
-    for (int signPosition = 0; signPosition < date.length(); signPosition++)
-    {
-        if (date[signPosition] != '-')
-        {
-            singlePartDate += date[signPosition];
-        }
-        else
-        {
-            switch(numberSinglePartDate)
-            {
-            case 1:
-            {
-                year=auxiliaryMethods.convertStringToInteger(singlePartDate);
-                break;
-            }
-
-            case 2:
-            {
-                month=auxiliaryMethods.convertStringToInteger(singlePartDate);
-                break;
-            }
-            case 3:
-            {
-                day=auxiliaryMethods.convertStringToInteger(singlePartDate);
-                break;
-            }
-            }
-            singlePartDate = "";
-            numberSinglePartDate++;
-        }
-    }
-    dateInt=year*10000+month*100+day;
-    return dateInt;
-}
 
 bool FileWithIncomes::addIncomeToFile(Income income)
 {

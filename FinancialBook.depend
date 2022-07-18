@@ -35,7 +35,7 @@
 	"User.h"
 	"AuxiliaryMethods.h"
 
-1658073728 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
+1658074838 source:c:\users\monika\documents\moniki\projekty c++\financialbook\main.cpp
 	<iostream>
 	"FinancialBook.h"
 
@@ -50,7 +50,7 @@
 	<sstream>
 	<cstdlib>
 
-1658074829 source:c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.cpp
+1658172636 source:c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.cpp
 	"FinancialBook.h"
 
 1658074829 c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.h
@@ -66,7 +66,7 @@
 1657480181 c:\users\monika\documents\moniki\projekty c++\financialbook\income.h
 	<iostream>
 
-1657739972 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
+1658173659 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
 	"FileWithIncomes.h"
 
 1657739972 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
@@ -78,11 +78,13 @@
 	"Markup.h"
 	"Dates.h"
 
-1657739972 source:c:\users\monika\documents\moniki\projekty c++\financialbook\dates.cpp
+1658173847 source:c:\users\monika\documents\moniki\projekty c++\financialbook\dates.cpp
 	"Dates.h"
 
-1657739972 c:\users\monika\documents\moniki\projekty c++\financialbook\dates.h
+1658173847 c:\users\monika\documents\moniki\projekty c++\financialbook\dates.h
 	<iostream>
 	<chrono>
 	<ctime>
+	<string>
+	"AuxiliaryMethods.h"
 
