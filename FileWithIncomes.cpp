@@ -34,8 +34,7 @@ Income FileWithIncomes::getNewIncomeData()
     if (sign == 't')
     {
         cout<<"Dzisiejsza data to: ";
-        date=dates.getTimeStr();
-        cout<<date<<endl;
+        cout<<dates.getTodayDate()<<endl;
     }
     if(sign=='n')
     {
@@ -53,7 +52,12 @@ Income FileWithIncomes::getNewIncomeData()
         }
         while(!dates.checkMonthDate(date))
         {
-            cout<<"Miesiac wpisu nie moze byc pozniejszy niz aktualny. Wpisz date ponownie: ";
+            cout<<"Wpisz date ponownie: ";
+            date=auxiliaryMethods.loadLine();
+        }
+        while(!dates.checkDayMonth(date))
+        {
+            cout<<"Wpisz date ponownie: ";
             date=auxiliaryMethods.loadLine();
         }
     }

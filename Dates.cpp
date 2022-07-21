@@ -81,20 +81,18 @@ bool Dates::checkStartDate (string date)
 
 bool Dates::checkMonthDate (string date)
 {
-    int dateInt, todayDateInt, loadMonth, todayMonth;
+    int dateInt, loadMonth, todayMonth;
     dateInt=convertDateToInteger(date+'-');
-    todayDateInt=convertDateToInteger(getTimeStr()+'-');
     loadMonth=separateMonthFromDateInt(dateInt);
     todayMonth=separateMonthFromDateInt(todayDateInt);
+
     if(loadMonth<0 || loadMonth>12 || loadMonth>todayMonth)
     {
         cout<<"Niepoprawna data"<<endl;
         return false;
     }
     else
-    {
         return true;
-    }
 }
 
 int Dates::separateMonthFromDateInt(int dateInt)
@@ -103,3 +101,68 @@ int Dates::separateMonthFromDateInt(int dateInt)
     return monthInt;
 }
 
+int Dates::separateDaysFromDateInt(int dateInt)
+{
+    cout<<dateInt<<endl;
+    int loadDays;
+    loadDays=dateInt%100;
+    cout<<loadDays<<endl;
+    return loadDays;
+}
+
+string Dates::getTodayDate()
+{
+    return todayDate;
+}
+
+bool Dates::ifLeapYear(int dateInt)
+{
+    int year= dateInt/10000;
+
+   if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+    return true;
+   else
+    return false;
+}
+
+int Dates::getDaysAMonth(int monthInt, int dateInt)
+{
+int daysMonth;
+if(monthInt%2==0)
+{
+    if(monthInt==2)
+    {
+        if (ifLeapYear(dateInt))
+            daysMonth=29;
+        else
+            daysMonth=28;
+    }
+    else
+    {
+        daysMonth=30;
+    }
+}
+else
+    daysMonth=31;
+
+    return daysMonth;
+}
+
+bool Dates::checkDayMonth(string date)
+{
+    int dateInt, loadDays, loadMonth, daysMonth;
+    dateInt=convertDateToInteger(date+'-');
+    loadDays=separateDaysFromDateInt(dateInt);
+    loadMonth=separateMonthFromDateInt(dateInt);
+    daysMonth=getDaysAMonth(loadMonth, dateInt);
+
+    cout<<daysMonth<<loadDays<<endl;
+    system("pause");
+    if (loadDays>daysMonth)
+    {
+        cout<<"Niepoprawna data"<<endl;
+        return false;
+    }
+    else
+        return true;
+}

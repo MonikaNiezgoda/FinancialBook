@@ -11,13 +11,26 @@ using namespace std;
 
 class Dates
 {
-public:
     string getTimeStr();
+    string todayDate;
+    int todayDateInt;
+    int separateMonthFromDateInt(int dateInt);
+    int separateDaysFromDateInt(int dateInt);
+    int getDaysAMonth(int monthInt, int dateInt);
+    bool ifLeapYear(int dateInt);
+public:
+    Dates () {
+        todayDate=getTimeStr();
+        todayDateInt=convertDateToInteger(todayDate);
+    };
+
     bool checkDateFormat (string date);
     int convertDateToInteger(string date);
     bool checkStartDate (string date);
     bool checkMonthDate (string date);
-    int separateMonthFromDateInt(int dateInt);
+    string getTodayDate();
+    bool checkDayMonth(string date);
+
 };
 
 #endif
