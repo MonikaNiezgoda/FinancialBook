@@ -85,6 +85,10 @@ bool Dates::checkMonthDate (string date)
     dateInt=convertDateToInteger(date+'-');
     loadMonth=separateMonthFromDateInt(dateInt);
     todayMonth=separateMonthFromDateInt(todayDateInt);
+    cout<<todayDate<<endl;
+    cout<<todayDateInt<<endl;
+    cout<<todayMonth<<endl;
+    system("pause");
 
     if(loadMonth<0 || loadMonth>12 || loadMonth>todayMonth)
     {
@@ -103,10 +107,8 @@ int Dates::separateMonthFromDateInt(int dateInt)
 
 int Dates::separateDaysFromDateInt(int dateInt)
 {
-    cout<<dateInt<<endl;
     int loadDays;
     loadDays=dateInt%100;
-    cout<<loadDays<<endl;
     return loadDays;
 }
 
@@ -155,9 +157,6 @@ bool Dates::checkDayMonth(string date)
     loadDays=separateDaysFromDateInt(dateInt);
     loadMonth=separateMonthFromDateInt(dateInt);
     daysMonth=getDaysAMonth(loadMonth, dateInt);
-
-    cout<<daysMonth<<loadDays<<endl;
-    system("pause");
     if (loadDays>daysMonth)
     {
         cout<<"Niepoprawna data"<<endl;
@@ -165,4 +164,10 @@ bool Dates::checkDayMonth(string date)
     }
     else
         return true;
+}
+
+Dates::Dates()
+{
+    todayDate=getTimeStr();
+    todayDateInt=convertDateToInteger(todayDate+'-');
 }

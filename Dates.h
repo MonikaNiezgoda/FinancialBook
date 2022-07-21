@@ -19,11 +19,7 @@ class Dates
     int getDaysAMonth(int monthInt, int dateInt);
     bool ifLeapYear(int dateInt);
 public:
-    Dates () {
-        todayDate=getTimeStr();
-        todayDateInt=convertDateToInteger(todayDate);
-    };
-
+    Dates ();
     bool checkDateFormat (string date);
     int convertDateToInteger(string date);
     bool checkStartDate (string date);

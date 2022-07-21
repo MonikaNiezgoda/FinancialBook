@@ -50,12 +50,12 @@ Income FileWithIncomes::getNewIncomeData()
             cout<<"Data musi byc pozniejsza niz 2000-01-01. Wpisz date ponownie: ";
             date=auxiliaryMethods.loadLine();
         }
-        while(!dates.checkMonthDate(date))
+        /*while(!dates.checkMonthDate(date))
         {
             cout<<"Wpisz date ponownie: ";
             date=auxiliaryMethods.loadLine();
-        }
-        while(!dates.checkDayMonth(date))
+        }*/
+        while(!dates.checkDayMonth(date) || !dates.checkMonthDate(date))
         {
             cout<<"Wpisz date ponownie: ";
             date=auxiliaryMethods.loadLine();
