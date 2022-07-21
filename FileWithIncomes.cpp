@@ -51,6 +51,11 @@ Income FileWithIncomes::getNewIncomeData()
             cout<<"Data musi byc pozniejsza niz 2000-01-01. Wpisz date ponownie: ";
             date=auxiliaryMethods.loadLine();
         }
+        while(!dates.checkMonthDate(date))
+        {
+            cout<<"Miesiac wpisu nie moze byc pozniejszy niz aktualny. Wpisz date ponownie: ";
+            date=auxiliaryMethods.loadLine();
+        }
     }
     income.setDate(date);
 

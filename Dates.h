@@ -16,6 +16,8 @@ public:
     bool checkDateFormat (string date);
     int convertDateToInteger(string date);
     bool checkStartDate (string date);
+    bool checkMonthDate (string date);
+    int separateMonthFromDateInt(int dateInt);
 };
 
 #endif

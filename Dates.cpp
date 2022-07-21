@@ -25,7 +25,7 @@ bool Dates::checkDateFormat (string date)
 int Dates::convertDateToInteger(string date)
 {
     AuxiliaryMethods auxiliaryMethods;
-    unsigned int dateInt;
+     int dateInt;
     int  year, month, day;
     string singlePartDate = "";
     int numberSinglePartDate = 1;
@@ -45,7 +45,6 @@ int Dates::convertDateToInteger(string date)
                 year=auxiliaryMethods.convertStringToInteger(singlePartDate);
                 break;
             }
-
             case 2:
             {
                 month=auxiliaryMethods.convertStringToInteger(singlePartDate);
@@ -79,3 +78,28 @@ bool Dates::checkStartDate (string date)
         return true;
     }
 }
+
+bool Dates::checkMonthDate (string date)
+{
+    int dateInt, todayDateInt, loadMonth, todayMonth;
+    dateInt=convertDateToInteger(date+'-');
+    todayDateInt=convertDateToInteger(getTimeStr()+'-');
+    loadMonth=separateMonthFromDateInt(dateInt);
+    todayMonth=separateMonthFromDateInt(todayDateInt);
+    if(loadMonth<0 || loadMonth>12 || loadMonth>todayMonth)
+    {
+        cout<<"Niepoprawna data"<<endl;
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+int Dates::separateMonthFromDateInt(int dateInt)
+{
+    int monthInt = (dateInt%10000)/100;
+    return monthInt;
+}
+
