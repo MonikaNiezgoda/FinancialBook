@@ -50,11 +50,6 @@ Income FileWithIncomes::getNewIncomeData()
             cout<<"Data musi byc pozniejsza niz 2000-01-01. Wpisz date ponownie: ";
             date=auxiliaryMethods.loadLine();
         }
-        /*while(!dates.checkMonthDate(date))
-        {
-            cout<<"Wpisz date ponownie: ";
-            date=auxiliaryMethods.loadLine();
-        }*/
         while(!dates.checkDayMonth(date) || !dates.checkMonthDate(date))
         {
             cout<<"Wpisz date ponownie: ";
@@ -66,7 +61,7 @@ Income FileWithIncomes::getNewIncomeData()
     string item;
     cout << "Podaj rodzaj przychodu: ";
     item = auxiliaryMethods.loadLine();
-    income.setItem(item);// czy zamieniac pierwsza litere na duza?
+    income.setItem(auxiliaryMethods.changeFirstLetterForUpperCaseAndOthersForLowerCase(item));// czy zamieniac pierwsza litere na duza?
 
     cout << "Podaj wartosc: ";
     income.setAmount(auxiliaryMethods.loadLine()); //zmiana wartosci na z kropką

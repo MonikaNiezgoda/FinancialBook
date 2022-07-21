@@ -43,3 +43,14 @@ string AuxiliaryMethods::konwerjsaIntNaString(int liczba)
     string str = ss.str();
     return str;
 }
+
+string AuxiliaryMethods:: changeFirstLetterForUpperCaseAndOthersForLowerCase(string text)
+{
+    if (!text.empty())
+    {
+        transform(text.begin(), text.end(), text.begin(), ::tolower);
+        text[0] = toupper(text[0]);
+    }
+    return text;
+}
+

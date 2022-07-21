@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <sstream>
-//#include <algorithm>
+#include <algorithm>
 #include <cstdlib>
 using namespace std;
 
@@ -14,6 +14,7 @@ public:
     static char loadChar();
     static int convertStringToInteger(string number);
     static string konwerjsaIntNaString(int numer);
+    static string changeFirstLetterForUpperCaseAndOthersForLowerCase(string text);
 };
 
 #endif
