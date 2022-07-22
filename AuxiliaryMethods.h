@@ -15,6 +15,7 @@ public:
     static int convertStringToInteger(string number);
     static string konwerjsaIntNaString(int numer);
     static string changeFirstLetterForUpperCaseAndOthersForLowerCase(string text);
+    static string checkDotsInAmount (string amount);
 };
 
 #endif

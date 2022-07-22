@@ -34,7 +34,8 @@ Income FileWithIncomes::getNewIncomeData()
     if (sign == 't')
     {
         cout<<"Dzisiejsza data to: ";
-        cout<<dates.getTodayDate()<<endl;
+        date=dates.getTodayDate();
+        cout<<date<<endl;
     }
     if(sign=='n')
     {
@@ -64,7 +65,7 @@ Income FileWithIncomes::getNewIncomeData()
     income.setItem(auxiliaryMethods.changeFirstLetterForUpperCaseAndOthersForLowerCase(item));// czy zamieniac pierwsza litere na duza?
 
     cout << "Podaj wartosc: ";
-    income.setAmount(auxiliaryMethods.loadLine()); //zmiana wartosci na z kropką
+    income.setAmount(auxiliaryMethods.checkDotsInAmount(auxiliaryMethods.loadLine())); //zmiana wartosci na z kropką
     return income;
 }
 
