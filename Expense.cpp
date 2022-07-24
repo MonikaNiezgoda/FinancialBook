@@ -1,48 +1,48 @@
-#include "Income.h"
+#include "Expense.h"
 
-void Income::setIncomeId(int newIncomeId)
+void Expense::setExpenseId(int newExpenseId)
 {
-    if (newIncomeId >= 0)
-    incomeId = newIncomeId;
+    if (newExpenseId >= 0)
+    expenseId = newExpenseId;
 }
 
-void Income::setUserId(int newUserId)
+void Expense::setUserId(int newUserId)
 {
     userId=newUserId;
 }
-void Income::setDate(string newDate)
+void Expense::setDate(string newDate)
 {
     date=newDate;
 }
-void Income::setItem(string newItem)
+void Expense::setItem(string newItem)
 {
     item=newItem;
 }
-void Income::setAmount(string newAmount)
+void Expense::setAmount(string newAmount)
 {
     amount = newAmount;
 }
 
-int Income::getIncomeId()
+int Expense::getExpenseId()
 {
-    return incomeId;
+    return expenseId;
 }
 
-int Income::getUserId()
+int Expense::getUserId()
 {
     return userId;
 }
 
-string Income::getDate()
+string Expense::getDate()
 {
     return date;
 }
 
-string Income::getItem()
+string Expense::getItem()
 {
     return item;
 }
-string Income::getAmount()
+string Expense::getAmount()
 {
     return amount;
 }

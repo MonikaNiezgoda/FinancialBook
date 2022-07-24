@@ -59,9 +59,7 @@ string AuxiliaryMethods::checkDotsInAmount (string amount)
     for (int i=0; i<amount.size()+1; i++)
     {
         if (amount[i]==',')
-        {
-            amount.replace(i,i,".");
-        }
+            amount.replace(i,1,".");
     }
     return amount;
 }
