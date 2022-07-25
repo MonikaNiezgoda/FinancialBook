@@ -77,4 +77,11 @@
 <Item>Wplata</Item>
 <Amount>30.0</Amount>
 </Income>
+<Income>
+<UserId>1</UserId>
+<IncomeId>9</IncomeId>
+<Date>2022-07-25</Date>
+<Item>Dodatkowy</Item>
+<Amount>155.00</Amount>
+</Income>
 </Incomes>

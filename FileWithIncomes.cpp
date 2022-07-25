@@ -157,7 +157,7 @@ vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
     return incomes;
 }
 
-void FileWithIncomes::showAllIncomes()
+/*void FileWithIncomes::showAllIncomes()
 {
     system("cls");
     if (!incomes.empty())
@@ -175,13 +175,21 @@ void FileWithIncomes::showAllIncomes()
         cout << endl << "Spis przychodow jest pusty." << endl << endl;
     }
     system("pause");
+}*/
 
-}
-
-void FileWithIncomes::showIncomeData(Income income)
+/*void FileWithIncomes::showIncomeData(Income income)
 {
     cout << "Data:               " << income.getDate() << endl;
     cout << "Przychod:           " << income.getItem() << endl;
     cout << "Wartosc:     " << income.getAmount() << endl;
     cout<<endl;
+}*/
+
+/*void FileWithIncomes::showAllIncomes()
+{
+    balance.showAllIncomes(incomes);
+}*/
+void FileWithIncomes::showAllCurrentMonth()
+{
+    balance.showAllCurrentMonth(incomes);
 }

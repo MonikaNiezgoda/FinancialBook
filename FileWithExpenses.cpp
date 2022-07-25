@@ -6,14 +6,14 @@ void FileWithExpenses::addExpense()
     Expense expense;
 
     system("cls");
-    cout << " >>> DODAWANIE PRZYCHODU <<<" << endl << endl;
+    cout << " >>> DODAWANIE WYDATKU <<<" << endl << endl;
     expense = getNewExpenseData();
 
     expenses.push_back(expense);
     if (addExpenseToFile(expense)) // dopisaæ do pliku z przychodami
-        cout << "Nowy przychod zostal dodany" << endl;
+        cout << "Nowy wydatek zostal dodany" << endl;
     else
-        cout << "Blad. Nie udalo sie dodac nowego przychodu."<< endl;
+        cout << "Blad. Nie udalo sie dodac nowego wydatku."<< endl;
     system("pause");
 }
 
@@ -60,7 +60,7 @@ Expense FileWithExpenses::getNewExpenseData()
     expense.setDate(date);
 
     string item;
-    cout << "Podaj rodzaj przychodu: ";
+    cout << "Podaj rodzaj wydatku: ";
     item = auxiliaryMethods.loadLine();
     expense.setItem(auxiliaryMethods.changeFirstLetterForUpperCaseAndOthersForLowerCase(item));// czy zamieniac pierwsza litere na duza?
 

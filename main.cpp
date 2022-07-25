@@ -38,8 +38,13 @@ int main()
             {
             case '1':
                 financialBook.addIncome();
+                break;
             case '2':
                 financialBook.addExpense();
+                break;
+            case '3':
+                financialBook.showAllCurrentMonth();
+                break;
             }
         }
     }

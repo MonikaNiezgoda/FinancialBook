@@ -7,4 +7,11 @@
 <Item>Picka</Item>
 <Amount>40.00</Amount>
 </Expense>
+<Expense>
+<UserId>1</UserId>
+<ExpenseId>2</ExpenseId>
+<Date>2022-07-25</Date>
+<Item>Wino</Item>
+<Amount>25.00</Amount>
+</Expense>
 </Expenses>

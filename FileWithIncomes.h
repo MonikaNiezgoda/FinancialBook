@@ -2,15 +2,13 @@
 #define FILEWITHINCOMES_H
 #include <iostream>
 #include <vector>
-//#include <algorithm>
 #include <sstream>
-//#include <cstdlib>
 
 #include "Income.h"
-//#include "UserMenager.h"
 #include "AuxiliaryMethods.h"
 #include "Markup.h"
 #include "Dates.h"
+#include "Balance.h"
 
 using namespace std;
 
@@ -18,10 +16,10 @@ class FileWithIncomes
 {
     const string FILE_NAME_WITH_INCOMES;
     const int LOGGED_IN_USER_ID;
-    vector <Income> incomes;
     int lastIncomeId;
     AuxiliaryMethods auxiliaryMethods;
     Dates dates;
+    Balance balance;
 
     void getIncomeData();
     Income getNewIncomeData();
@@ -35,7 +33,9 @@ public:
         {
         incomes = loadIncomesLoggedInUser(LOGGED_IN_USER_ID);
         };
+        vector <Income> incomes;
         void addIncome();
         void showAllIncomes();
+        void showAllCurrentMonth();
 };
 #endif

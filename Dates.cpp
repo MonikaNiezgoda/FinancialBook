@@ -24,8 +24,9 @@ bool Dates::checkDateFormat (string date)
 
 int Dates::convertDateToInteger(string date)
 {
+    date= date+'-';
     AuxiliaryMethods auxiliaryMethods;
-     int dateInt;
+    int dateInt;
     int  year, month, day;
     string singlePartDate = "";
     int numberSinglePartDate = 1;
@@ -85,10 +86,6 @@ bool Dates::checkMonthDate (string date)
     dateInt=convertDateToInteger(date+'-');
     loadMonth=separateMonthFromDateInt(dateInt);
     todayMonth=separateMonthFromDateInt(todayDateInt);
-    cout<<todayDate<<endl;
-    cout<<todayDateInt<<endl;
-    cout<<todayMonth<<endl;
-    system("pause");
 
     if(loadMonth<0 || loadMonth>12 || loadMonth>todayMonth)
     {
@@ -112,15 +109,26 @@ int Dates::separateDaysFromDateInt(int dateInt)
     return loadDays;
 }
 
+int Dates::separateYearFromDateInt(int dateInt)
+{
+    int year= dateInt/10000;
+    return year;
+}
+
+
 string Dates::getTodayDate()
 {
     return todayDate;
 }
 
+int Dates::getTodayDateInt()
+{
+    return todayDateInt;
+}
+
 bool Dates::ifLeapYear(int dateInt)
 {
-    int year= dateInt/10000;
-
+    int year =separateYearFromDateInt(dateInt);
    if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
     return true;
    else

@@ -14,10 +14,9 @@ class Dates
     string getTimeStr();
     string todayDate;
     int todayDateInt;
-    int separateMonthFromDateInt(int dateInt);
     int separateDaysFromDateInt(int dateInt);
-    int getDaysAMonth(int monthInt, int dateInt);
     bool ifLeapYear(int dateInt);
+
 public:
     Dates ();
     bool checkDateFormat (string date);
@@ -25,8 +24,11 @@ public:
     bool checkStartDate (string date);
     bool checkMonthDate (string date);
     string getTodayDate();
+    int getTodayDateInt();
     bool checkDayMonth(string date);
-
+    int separateYearFromDateInt(int dateInt);
+    int separateMonthFromDateInt(int dateInt);
+    int getDaysAMonth(int monthInt, int dateInt);
 };
 
 #endif
