@@ -193,3 +193,8 @@ void FileWithIncomes::showAllCurrentMonth()
 {
     balance.showAllCurrentMonth(incomes);
 }
+
+void FileWithIncomes::showAllIncomesPreviousMonth()
+{
+    balance.showAllIncomesPreviousMonth(incomes);
+}

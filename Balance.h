@@ -15,12 +15,13 @@ class Balance
     //vector <Income> incomes;
     void showIncomeData(Income income);
     Dates dates;
-    int currentYear, currentMonth, endDay, startDay;
+    int currentYear, currentMonth, endDay, startDay, previousMonth;
    // FileWithIncomes fileWithIncomes;
 
 public:
     void showAllIncomes(vector<Income> incomes);
     void showAllCurrentMonth(vector<Income> incomes);
+    void showAllIncomesPreviousMonth(vector<Income> incomes);
 };
 
 #endif

@@ -8,7 +8,6 @@ void Balance::showAllCurrentMonth(vector<Income> incomes)
     startDay=currentYear*10000+currentMonth*100+0;
     endDay=currentYear*10000+currentMonth*100+dates.getDaysAMonth(currentMonth,dates.getTodayDateInt());
 
-
     system("cls");
     if (!incomes.empty())
     {
@@ -39,4 +38,32 @@ void Balance::showIncomeData(Income income)
     cout << "Wartosc:     " << income.getAmount() << endl;
     cout<<endl;
     }
+}
+
+void Balance::showAllIncomesPreviousMonth(vector<Income> incomes)
+{
+    Income income;
+    previousMonth=dates.separateMonthFromDateInt(dates.getTodayDateInt())-1;
+    currentYear=dates.separateYearFromDateInt(dates.getTodayDateInt());
+    startDay=currentYear*10000+previousMonth*100+0;
+    endDay=currentYear*10000+previousMonth*100+dates.getDaysAMonth(currentMonth,dates.getTodayDateInt());
+
+    system("cls");
+    if (!incomes.empty())
+    {
+sort(incomes.begin(), incomes.end(),income.CompareByDate);
+        cout << "             >>> PRZYCHODY <<<" << endl;
+        cout << "-----------------------------------------------" << endl;
+        for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++)
+        {
+            showIncomeData(*itr);
+        }
+        cout << endl;
+    }
+    else
+    {
+        cout << endl << "Spis przychodow jest pusty." << endl << endl;
+    }
+    system("pause");
+
 }

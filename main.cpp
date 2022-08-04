@@ -45,6 +45,9 @@ int main()
             case '3':
                 financialBook.showAllCurrentMonth();
                 break;
+            case '4':
+                financialBook.showAllIncomesPreviousMonth();
+                break;
             }
         }
     }
