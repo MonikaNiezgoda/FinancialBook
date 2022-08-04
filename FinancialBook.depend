@@ -63,11 +63,12 @@
 	"FileWithExpenses.h"
 	"Balance.h"
 
-1657480181 source:c:\users\monika\documents\moniki\projekty c++\financialbook\income.cpp
+1659630640 source:c:\users\monika\documents\moniki\projekty c++\financialbook\income.cpp
 	"Income.h"
 
-1657480181 c:\users\monika\documents\moniki\projekty c++\financialbook\income.h
+1659630524 c:\users\monika\documents\moniki\projekty c++\financialbook\income.h
 	<iostream>
+	<string>
 
 1658772133 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
 	"FileWithIncomes.h"
@@ -110,12 +111,14 @@
 	"Markup.h"
 	"Dates.h"
 
-1658772003 source:c:\users\monika\documents\moniki\projekty c++\financialbook\balance.cpp
+1659629719 source:c:\users\monika\documents\moniki\projekty c++\financialbook\balance.cpp
 	"Balance.h"
 
-1658777718 c:\users\monika\documents\moniki\projekty c++\financialbook\balance.h
+1659629804 c:\users\monika\documents\moniki\projekty c++\financialbook\balance.h
 	<iostream>
 	<vector>
+	<algorithm>
+	<string>
 	"Income.h"
 	"Dates.h"
 

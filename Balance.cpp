@@ -2,21 +2,22 @@
 
 void Balance::showAllCurrentMonth(vector<Income> incomes)
 {
+    Income income;
     currentMonth=dates.separateMonthFromDateInt(dates.getTodayDateInt());
     currentYear=dates.separateYearFromDateInt(dates.getTodayDateInt());
-    startDay=currentYear*10000+currentMonth*100+1;
-    cout<<startDay<<endl;
+    startDay=currentYear*10000+currentMonth*100+0;
     endDay=currentYear*10000+currentMonth*100+dates.getDaysAMonth(currentMonth,dates.getTodayDateInt());
-    cout<<endDay<<endl;
-    system("pause");
+
 
     system("cls");
     if (!incomes.empty())
     {
+sort(incomes.begin(), incomes.end(),income.CompareByDate);
         cout << "             >>> PRZYCHODY <<<" << endl;
         cout << "-----------------------------------------------" << endl;
         for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++)
         {
+
             showIncomeData(*itr);
         }
         cout << endl;
@@ -38,5 +39,4 @@ void Balance::showIncomeData(Income income)
     cout << "Wartosc:     " << income.getAmount() << endl;
     cout<<endl;
     }
-
 }

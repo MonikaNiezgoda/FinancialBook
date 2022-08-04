@@ -3,9 +3,12 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <string>
 
 #include "Income.h"
 #include "Dates.h"
+
 
 class Balance
 {

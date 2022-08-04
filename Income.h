@@ -1,6 +1,7 @@
 #ifndef INCOME_H
 #define INCOME_H
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -13,6 +14,7 @@ class Income
     string amount;
 
 public:
+
     void setIncomeId(int newIncomeId);
     void setUserId(int newUserId);
     void setDate(string newDate);
@@ -24,5 +26,6 @@ public:
     string getDate();
     string getItem();
     string getAmount();
+    static bool CompareByDate( Income& l, Income& r);
 };
 #endif
