@@ -112,10 +112,10 @@
 	"Dates.h"
 	"Balance.h"
 
-1659868049 source:c:\users\monika\documents\moniki\projekty c++\financialbook\balance.cpp
+1659869615 source:c:\users\monika\documents\moniki\projekty c++\financialbook\balance.cpp
 	"Balance.h"
 
-1659868102 c:\users\monika\documents\moniki\projekty c++\financialbook\balance.h
+1659871052 c:\users\monika\documents\moniki\projekty c++\financialbook\balance.h
 	<iostream>
 	<vector>
 	<algorithm>

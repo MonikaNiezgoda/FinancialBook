@@ -7,6 +7,7 @@ void Balance::showAllIncomesCurrentMonth(vector<Income> incomes)
     currentYear=dates.separateYearFromDateInt(dates.getTodayDateInt());
     startDay=currentYear*10000+currentMonth*100+0;
     endDay=currentYear*10000+currentMonth*100+dates.getDaysAMonth(currentMonth,dates.getTodayDateInt());
+    int suma;
 
     system("cls");
     if (!incomes.empty())
@@ -16,7 +17,7 @@ void Balance::showAllIncomesCurrentMonth(vector<Income> incomes)
         cout << "-----------------------------------------------" << endl;
         for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++)
         {
-            showIncomeData(*itr);
+             suma+=showIncomeData(*itr);
         }
         cout << endl;
     }
@@ -24,19 +25,23 @@ void Balance::showAllIncomesCurrentMonth(vector<Income> incomes)
     {
         cout << endl << "Spis przychodow jest pusty." << endl << endl;
     }
-    //system("pause");
-
+    cout<<suma<<endl;
+    system("pause");
 }
 
-void Balance::showIncomeData(Income income)
+int Balance::showIncomeData(Income income)
 {
+    int amount;
+    AuxiliaryMethods auxiliaryMethods;
     if (dates.convertDateToInteger(income.getDate())<endDay && dates.convertDateToInteger(income.getDate())>startDay)
     {
         cout << "Data:               " << income.getDate() << endl;
         cout << "Przychod:           " << income.getItem() << endl;
         cout << "Wartosc:     " << income.getAmount() << endl;
         cout<<endl;
+        return auxiliaryMethods.convertStringToInteger(income.getAmount());
     }
+    else return 0;
 }
 void Balance::showExpenseData(Expense expense)
 {
@@ -51,11 +56,13 @@ void Balance::showExpenseData(Expense expense)
 
 void Balance::showAllIncomesPreviousMonth(vector<Income> incomes)
 {
+    AuxiliaryMethods auxiliaryMethods;
     Income income;
     previousMonth=dates.separateMonthFromDateInt(dates.getTodayDateInt())-1;
     currentYear=dates.separateYearFromDateInt(dates.getTodayDateInt());
     startDay=currentYear*10000+previousMonth*100+0;
     endDay=currentYear*10000+previousMonth*100+dates.getDaysAMonth(currentMonth,dates.getTodayDateInt());
+    int suma;
 
     system("cls");
     if (!incomes.empty())
@@ -66,6 +73,7 @@ void Balance::showAllIncomesPreviousMonth(vector<Income> incomes)
         for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++)
         {
             showIncomeData(*itr);
+            suma+=auxiliaryMethods.convertStringToInteger(income.getAmount());
         }
         cout << endl;
     }

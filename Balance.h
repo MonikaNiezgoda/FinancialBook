@@ -15,7 +15,7 @@ class Balance
 {
     Dates dates;
     int currentYear, currentMonth, endDay, startDay, previousMonth;
-    void showIncomeData(Income income);
+    int showIncomeData(Income income);
     void showExpenseData(Expense expense);
 
 public:
