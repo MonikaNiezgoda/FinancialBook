@@ -47,7 +47,7 @@ string Income::getAmount()
     return amount;
 }
 
- bool Income::CompareByDate( Income& l, Income& r) {
-
+ bool Income::CompareByDate( Income& l, Income& r)
+{
     return l.date < r.date;
 }

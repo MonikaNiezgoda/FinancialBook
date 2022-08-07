@@ -24,5 +24,7 @@ public:
     string getDate();
     string getItem();
     string getAmount();
+
+    static bool CompareByDate( Expense& l, Expense& r);
 };
 #endif

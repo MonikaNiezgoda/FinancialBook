@@ -46,4 +46,7 @@ string Expense::getAmount()
 {
     return amount;
 }
-
+bool Expense::CompareByDate( Expense& l, Expense& r)
+{
+    return l.date < r.date;
+}

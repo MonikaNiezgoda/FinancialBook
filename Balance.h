@@ -8,20 +8,21 @@
 
 #include "Income.h"
 #include "Dates.h"
+#include "Expense.h"
 
 
 class Balance
 {
-    //vector <Income> incomes;
-    void showIncomeData(Income income);
     Dates dates;
     int currentYear, currentMonth, endDay, startDay, previousMonth;
-   // FileWithIncomes fileWithIncomes;
+    void showIncomeData(Income income);
+    void showExpenseData(Expense expense);
 
 public:
     void showAllIncomes(vector<Income> incomes);
-    void showAllCurrentMonth(vector<Income> incomes);
+    void showAllIncomesCurrentMonth(vector<Income> incomes);
     void showAllIncomesPreviousMonth(vector<Income> incomes);
+    void showAllExpensesCurrentMonth(vector<Expense> expenses);
 };
 
 #endif

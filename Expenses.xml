@@ -14,4 +14,11 @@
 <Item>Wino</Item>
 <Amount>25.00</Amount>
 </Expense>
+<Expense>
+<UserId>1</UserId>
+<ExpenseId>3</ExpenseId>
+<Date>2022-08-07</Date>
+<Item>Pizza</Item>
+<Amount>100</Amount>
+</Expense>
 </Expenses>

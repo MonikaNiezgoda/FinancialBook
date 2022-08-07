@@ -8,6 +8,7 @@
 #include "AuxiliaryMethods.h"
 #include "Markup.h"
 #include "Dates.h"
+#include "Balance.h"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ class FileWithExpenses
     int lastExpenseId;
     AuxiliaryMethods auxiliaryMethods;
     Dates dates;
+    Balance balance;
 
     void getExpenseData();
     Expense getNewExpenseData();
@@ -34,5 +36,7 @@ public:
         };
         void addExpense();
         void showAllExpenses();
+        void showAllExpensesCurrentMonth();
+        void showAllExpensesPreviousMonth();
 };
 #endif

@@ -36,7 +36,7 @@ public:
         vector <Income> incomes;
         void addIncome();
         void showAllIncomes();
-        void showAllCurrentMonth();
+        void showAllIncomesCurrentMonth();
         void showAllIncomesPreviousMonth();
 };
 #endif

@@ -157,7 +157,7 @@ vector <Expense> FileWithExpenses::loadExpensesLoggedInUser(int loggedInUserId)
     return expenses;
 }
 
-void FileWithExpenses::showAllExpenses()
+/*void FileWithExpenses::showAllExpenses()
 {
     system("cls");
     if (!expenses.empty())
@@ -175,13 +175,14 @@ void FileWithExpenses::showAllExpenses()
         cout << endl << "Spis przychodow jest pusty." << endl << endl;
     }
     system("pause");
+}*/
 
-}
-
-void FileWithExpenses::showExpenseData(Expense expense)
+void FileWithExpenses::showAllExpensesCurrentMonth()
 {
-    cout << "Data:               " << expense.getDate() << endl;
-    cout << "Przychod:           " << expense.getItem() << endl;
-    cout << "Wartosc:     " << expense.getAmount() << endl;
-    cout<<endl;
+    balance.showAllExpensesCurrentMonth(expenses);
 }
+
+/*void FileWithExpenses::showAllExpensesPreviousMonth()
+{
+    balance.showAllExpensesPreviousMonth(expenses);
+}*/

@@ -1,6 +1,6 @@
 #include "Balance.h"
 
-void Balance::showAllCurrentMonth(vector<Income> incomes)
+void Balance::showAllIncomesCurrentMonth(vector<Income> incomes)
 {
     Income income;
     currentMonth=dates.separateMonthFromDateInt(dates.getTodayDateInt());
@@ -11,12 +11,11 @@ void Balance::showAllCurrentMonth(vector<Income> incomes)
     system("cls");
     if (!incomes.empty())
     {
-sort(incomes.begin(), incomes.end(),income.CompareByDate);
+        sort(incomes.begin(), incomes.end(),income.CompareByDate);
         cout << "             >>> PRZYCHODY <<<" << endl;
         cout << "-----------------------------------------------" << endl;
         for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++)
         {
-
             showIncomeData(*itr);
         }
         cout << endl;
@@ -25,7 +24,7 @@ sort(incomes.begin(), incomes.end(),income.CompareByDate);
     {
         cout << endl << "Spis przychodow jest pusty." << endl << endl;
     }
-    system("pause");
+    //system("pause");
 
 }
 
@@ -33,10 +32,20 @@ void Balance::showIncomeData(Income income)
 {
     if (dates.convertDateToInteger(income.getDate())<endDay && dates.convertDateToInteger(income.getDate())>startDay)
     {
-    cout << "Data:               " << income.getDate() << endl;
-    cout << "Przychod:           " << income.getItem() << endl;
-    cout << "Wartosc:     " << income.getAmount() << endl;
-    cout<<endl;
+        cout << "Data:               " << income.getDate() << endl;
+        cout << "Przychod:           " << income.getItem() << endl;
+        cout << "Wartosc:     " << income.getAmount() << endl;
+        cout<<endl;
+    }
+}
+void Balance::showExpenseData(Expense expense)
+{
+    if (dates.convertDateToInteger(expense.getDate())<endDay && dates.convertDateToInteger(expense.getDate())>startDay)
+    {
+        cout << "Data:               " << expense.getDate() << endl;
+        cout << "Wydatek:           " << expense.getItem() << endl;
+        cout << "Wartosc:     " << expense.getAmount() << endl;
+        cout<<endl;
     }
 }
 
@@ -51,7 +60,7 @@ void Balance::showAllIncomesPreviousMonth(vector<Income> incomes)
     system("cls");
     if (!incomes.empty())
     {
-sort(incomes.begin(), incomes.end(),income.CompareByDate);
+        sort(incomes.begin(), incomes.end(),income.CompareByDate);
         cout << "             >>> PRZYCHODY <<<" << endl;
         cout << "-----------------------------------------------" << endl;
         for (vector <Income> :: iterator itr = incomes.begin(); itr != incomes.end(); itr++)
@@ -65,5 +74,31 @@ sort(incomes.begin(), incomes.end(),income.CompareByDate);
         cout << endl << "Spis przychodow jest pusty." << endl << endl;
     }
     system("pause");
+}
 
+void Balance::showAllExpensesCurrentMonth(vector<Expense> expenses)
+{
+    Expense expense;
+    currentMonth=dates.separateMonthFromDateInt(dates.getTodayDateInt());
+    currentYear=dates.separateYearFromDateInt(dates.getTodayDateInt());
+    startDay=currentYear*10000+currentMonth*100+0;
+    endDay=currentYear*10000+currentMonth*100+dates.getDaysAMonth(currentMonth,dates.getTodayDateInt());
+
+    system("cls");
+    if (!expenses.empty())
+    {
+        sort(expenses.begin(), expenses.end(),expense.CompareByDate);
+        cout << "             >>> WYDATKI <<<" << endl;
+        cout << "-----------------------------------------------" << endl;
+        for (vector <Expense> :: iterator itr = expenses.begin(); itr != expenses.end(); itr++)
+        {
+            showExpenseData(*itr);
+        }
+        cout << endl;
+    }
+    else
+    {
+        cout << endl << "Spis wydatkow jest pusty." << endl << endl;
+    }
+    system("pause");
 }
