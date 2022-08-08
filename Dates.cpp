@@ -174,8 +174,4 @@ bool Dates::checkDayMonth(string date)
         return true;
 }
 
-Dates::Dates()
-{
-    todayDate=getTimeStr();
-    todayDateInt=convertDateToInteger(todayDate+'-');
-}
+

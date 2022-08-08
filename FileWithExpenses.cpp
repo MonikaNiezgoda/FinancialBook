@@ -179,10 +179,15 @@ vector <Expense> FileWithExpenses::loadExpensesLoggedInUser(int loggedInUserId)
 
 void FileWithExpenses::showAllExpensesCurrentMonth()
 {
-    balance.showAllExpensesCurrentMonth(expenses);
+   sumExpenses= balance.showAllExpensesCurrentMonth(expenses);
 }
 
-/*void FileWithExpenses::showAllExpensesPreviousMonth()
+void FileWithExpenses::showAllExpensesPreviousMonth()
 {
-    balance.showAllExpensesPreviousMonth(expenses);
-}*/
+    sumExpenses=balance.showAllExpensesPreviousMonth(expenses);
+}
+
+int FileWithExpenses::getSumExpenses()
+{
+    return sumExpenses;
+}

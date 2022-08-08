@@ -18,7 +18,11 @@ class Dates
     bool ifLeapYear(int dateInt);
 
 public:
-    Dates ();
+    Dates()
+    {
+        todayDate=getTimeStr();
+        todayDateInt=convertDateToInteger(todayDate+'-');
+    }
     bool checkDateFormat (string date);
     int convertDateToInteger(string date);
     bool checkStartDate (string date);

@@ -16,7 +16,7 @@ class FileWithIncomes
 {
     const string FILE_NAME_WITH_INCOMES;
     const int LOGGED_IN_USER_ID;
-    int lastIncomeId;
+    int lastIncomeId, sumIncomes;
     AuxiliaryMethods auxiliaryMethods;
     Dates dates;
     Balance balance;
@@ -38,5 +38,6 @@ public:
         void showAllIncomes();
         void showAllIncomesCurrentMonth();
         void showAllIncomesPreviousMonth();
+        int getSumIncomes();
 };
 #endif

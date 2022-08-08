@@ -191,10 +191,17 @@ vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
 }*/
 void FileWithIncomes::showAllIncomesCurrentMonth()
 {
-    balance.showAllIncomesCurrentMonth(incomes);
+    sumIncomes=balance.showAllIncomesCurrentMonth(incomes);
 }
+
 
 void FileWithIncomes::showAllIncomesPreviousMonth()
 {
-    balance.showAllIncomesPreviousMonth(incomes);
+    sumIncomes=balance.showAllIncomesPreviousMonth(incomes);
 }
+
+int FileWithIncomes::getSumIncomes()
+{
+    return sumIncomes;
+}
+

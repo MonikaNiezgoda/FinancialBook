@@ -13,16 +13,25 @@
 
 class Balance
 {
-    Dates dates;
     int currentYear, currentMonth, endDay, startDay, previousMonth;
+    int sumIncomes, sumExpenses, balance;
     int showIncomeData(Income income);
-    void showExpenseData(Expense expense);
+    int showExpenseData(Expense expense);
+    Dates dates;
+    AuxiliaryMethods auxiliaryMethods;
 
 public:
+    Balance()
+    {
+        sumExpenses=0;
+        sumIncomes=0;
+    }
+
     void showAllIncomes(vector<Income> incomes);
-    void showAllIncomesCurrentMonth(vector<Income> incomes);
-    void showAllIncomesPreviousMonth(vector<Income> incomes);
-    void showAllExpensesCurrentMonth(vector<Expense> expenses);
+    int showAllIncomesCurrentMonth(vector<Income> incomes);
+    int showAllIncomesPreviousMonth(vector<Income> incomes);
+    int showAllExpensesCurrentMonth(vector<Expense> expenses);
+    int showAllExpensesPreviousMonth(vector<Expense> expenses);
 };
 
 #endif

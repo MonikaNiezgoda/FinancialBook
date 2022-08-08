@@ -17,7 +17,7 @@ class FileWithExpenses
     const string FILE_NAME_WITH_EXPENSES;
     const int LOGGED_IN_USER_ID;
     vector <Expense> expenses;
-    int lastExpenseId;
+    int lastExpenseId, sumExpenses;
     AuxiliaryMethods auxiliaryMethods;
     Dates dates;
     Balance balance;
@@ -38,5 +38,6 @@ public:
         void showAllExpenses();
         void showAllExpensesCurrentMonth();
         void showAllExpensesPreviousMonth();
+        int getSumExpenses();
 };
 #endif
