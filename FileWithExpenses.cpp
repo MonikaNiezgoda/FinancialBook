@@ -191,3 +191,7 @@ int FileWithExpenses::getSumExpenses()
 {
     return sumExpenses;
 }
+void FileWithExpenses::showAllExpensesChosenDates(int startDate,int endDate)
+{
+    sumExpenses=balance.showAllExpensesChosenDates(expenses, startDate, endDate);
+}

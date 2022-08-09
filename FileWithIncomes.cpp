@@ -199,9 +199,9 @@ void FileWithIncomes::showAllIncomesPreviousMonth()
     sumIncomes=balance.showAllIncomesPreviousMonth(incomes);
 }
 
-void FileWithIncomes::showAllIncomesChosenDates()
+void FileWithIncomes::showAllIncomesChosenDates(int startDate,int endDate)
 {
-    sumIncomes=balance.showAllIncomesChosenDates(incomes);
+    sumIncomes=balance.showAllIncomesChosenDates(incomes, startDate, endDate);
 }
 
 int FileWithIncomes::getSumIncomes()

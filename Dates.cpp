@@ -192,3 +192,21 @@ int Dates::checkDateString(string date)
         }
         return convertDateToInteger(date);
 }
+
+int Dates::getStartDate()
+{
+    AuxiliaryMethods auxiliaryMethods;
+    string startDate;
+    cout<<"Podaj date poczatkowa: ";
+    startDate=auxiliaryMethods.loadLine();
+    return checkDateString(startDate);
+}
+
+int Dates::getEndDate()
+{
+    AuxiliaryMethods auxiliaryMethods;
+    string endDate;
+    cout<<"Podaj date koncowa: ";
+    endDate=auxiliaryMethods.loadLine();
+    return checkDateString(endDate);
+}

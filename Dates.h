@@ -34,6 +34,8 @@ public:
     int separateMonthFromDateInt(int dateInt);
     int getDaysAMonth(int monthInt, int dateInt);
     int checkDateString(string date);
+    int getStartDate();
+    int getEndDate();
 };
 
 #endif

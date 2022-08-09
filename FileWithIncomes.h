@@ -28,6 +28,7 @@ class FileWithIncomes
     vector <Income> loadIncomesLoggedInUser(int loggedInUserId);
     void showIncomeData(Income income);
 
+
 public:
   FileWithIncomes (string fileNameWithIncomes, int loggedInUserId) : FILE_NAME_WITH_INCOMES(fileNameWithIncomes), LOGGED_IN_USER_ID(loggedInUserId)
         {
@@ -38,7 +39,7 @@ public:
         void showAllIncomes();
         void showAllIncomesCurrentMonth();
         void showAllIncomesPreviousMonth();
-        void showAllIncomesChosenDates();
+        void showAllIncomesChosenDates(int startDate,int endDate);
         int getSumIncomes();
 };
 #endif

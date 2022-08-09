@@ -150,50 +150,11 @@ int Balance::showAllExpensesPreviousMonth(vector<Expense> expenses)
     }
 }
 
-int Balance::showAllIncomesChosenDates(vector<Income> incomes)
+int Balance::showAllIncomesChosenDates(vector<Income> incomes, int startDate,int endDate)
 {
     Income income;
-    string startDate, endDate;
-    cout<<"Podaj date poczatkowa: ";
-    startDate = auxiliaryMethods.loadLine();
-    startDay=dates.checkDateString(startDate);
-       /* while (!dates.checkDateFormat(startDate))
-        {
-            cout<<"Wpisz jeszcze raz date w poprawnym formacie rrrr-mm-dd: ";
-            startDate=auxiliaryMethods.loadLine();
-        }
-        while(!dates.checkStartDate(startDate))
-        {
-            cout<<"Data musi byc pozniejsza niz 2000-01-01. Wpisz date ponownie: ";
-            startDate=auxiliaryMethods.loadLine();
-        }
-        while(!dates.checkDayMonth(startDate) || !dates.checkMonthDate(startDate))
-        {
-            cout<<"Wpisz date ponownie: ";
-            startDate=auxiliaryMethods.loadLine();
-        }
-    startDay=dates.convertDateToInteger(startDate);*/
-cout<<"Podaj date koncowa: ";
- endDate = auxiliaryMethods.loadLine();
-        while (!dates.checkDateFormat(endDate))
-        {
-            cout<<"Wpisz jeszcze raz date w poprawnym formacie rrrr-mm-dd: ";
-            endDate=auxiliaryMethods.loadLine();
-        }
-        while(!dates.checkStartDate(endDate))
-        {
-            cout<<"Data musi byc pozniejsza niz 2000-01-01. Wpisz date ponownie: ";
-            endDate=auxiliaryMethods.loadLine();
-        }
-        while(!dates.checkDayMonth(endDate) || !dates.checkMonthDate(endDate))
-        {
-            cout<<"Wpisz date ponownie: ";
-            endDate=auxiliaryMethods.loadLine();
-        }
-    endDay=dates.convertDateToInteger(endDate);
-    cout<<endDay<<endl;
-    system("pause");
-
+    startDay=startDate;
+    endDay=endDate;
     system("cls");
     if (!incomes.empty())
     {
@@ -215,4 +176,44 @@ cout<<"Podaj date koncowa: ";
         system("pause");
         return 0;
     }
+}
+
+int Balance::showAllExpensesChosenDates(vector<Expense> expenses, int startDate,int endDate)
+{
+    Expense expense;
+    startDay=startDate;
+    endDay=endDate;
+    system("cls");
+    if (!expenses.empty())
+    {
+        sort(expenses.begin(), expenses.end(),expense.CompareByDate);
+        cout << "             >>> WYDATKI <<<" << endl;
+        cout << "-----------------------------------------------" << endl;
+        for (vector <Expense> :: iterator itr = expenses.begin(); itr != expenses.end(); itr++)
+        {
+            sumExpenses+=showExpenseData(*itr);
+        }
+        cout << endl;
+        cout<<"Suma wydatkow w poprzednim miesiacu to: "<<sumExpenses<<endl<<endl;
+        system("pause");
+        return sumExpenses;
+    }
+    else
+    {
+        cout << endl << "Spis wydatkow jest pusty." << endl << endl;
+        system("pause");
+        return 0;
+    }
+}
+
+
+
+int Balance::getStartDay()
+{
+    return startDay;
+}
+
+void Balance::setStartDay(int newStartDay)
+{
+    startDay=newStartDay;
 }

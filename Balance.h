@@ -32,7 +32,12 @@ public:
     int showAllIncomesPreviousMonth(vector<Income> incomes);
     int showAllExpensesCurrentMonth(vector<Expense> expenses);
     int showAllExpensesPreviousMonth(vector<Expense> expenses);
-    int showAllIncomesChosenDates(vector<Income> incomes);
+    int showAllIncomesChosenDates(vector<Income> incomes, int startDay,int endDay);
+    int showAllExpensesChosenDates(vector<Expense> expenses, int startDate,int endDate);
+
+
+   int getStartDay();
+   void setStartDay(int newStartDay);
 };
 
 #endif
