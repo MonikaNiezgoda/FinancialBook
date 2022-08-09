@@ -210,3 +210,4 @@ int Dates::getEndDate()
     endDate=auxiliaryMethods.loadLine();
     return checkDateString(endDate);
 }
+
