@@ -32,8 +32,26 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AuxiliaryMethods.cpp" />
+		<Unit filename="AuxiliaryMethods.h" />
+		<Unit filename="Balance.cpp" />
+		<Unit filename="Balance.h" />
+		<Unit filename="Dates.cpp" />
+		<Unit filename="Dates.h" />
+		<Unit filename="Expense.cpp" />
+		<Unit filename="Expense.h" />
+		<Unit filename="FileWithExpenses.cpp" />
+		<Unit filename="FileWithExpenses.h" />
+		<Unit filename="FileWithIncomes.cpp" />
+		<Unit filename="FileWithIncomes.h" />
 		<Unit filename="FileWithUsers.cpp" />
 		<Unit filename="FileWithUsers.h" />
+		<Unit filename="FinancialBook.cpp" />
+		<Unit filename="FinancialBook.h" />
+		<Unit filename="Income.cpp" />
+		<Unit filename="Income.h" />
+		<Unit filename="Markup.cpp" />
+		<Unit filename="Markup.h" />
 		<Unit filename="User.cpp" />
 		<Unit filename="User.h" />
 		<Unit filename="UserMenager.cpp" />

@@ -38,6 +38,7 @@ public:
         void showAllIncomes();
         void showAllIncomesCurrentMonth();
         void showAllIncomesPreviousMonth();
+        void showAllIncomesChosenDates();
         int getSumIncomes();
 };
 #endif

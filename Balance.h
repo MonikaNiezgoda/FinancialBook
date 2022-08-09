@@ -32,6 +32,7 @@ public:
     int showAllIncomesPreviousMonth(vector<Income> incomes);
     int showAllExpensesCurrentMonth(vector<Expense> expenses);
     int showAllExpensesPreviousMonth(vector<Expense> expenses);
+    int showAllIncomesChosenDates(vector<Income> incomes);
 };
 
 #endif

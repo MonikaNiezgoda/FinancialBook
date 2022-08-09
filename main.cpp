@@ -48,6 +48,9 @@ int main()
             case '4':
                 financialBook.showAllPreviousMonth();
                 break;
+            case '5':
+                financialBook.showAllChosenDates();
+                break;
             }
         }
     }

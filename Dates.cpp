@@ -17,9 +17,7 @@ bool Dates::checkDateFormat (string date)
         return false;
     }
     else
-    {
         return true;
-    }
 }
 
 int Dates::convertDateToInteger(string date)
@@ -174,4 +172,23 @@ bool Dates::checkDayMonth(string date)
         return true;
 }
 
-
+int Dates::checkDateString(string date)
+{
+    AuxiliaryMethods auxiliaryMethods;
+      while (!checkDateFormat(date))
+        {
+            cout<<"Wpisz jeszcze raz date w poprawnym formacie rrrr-mm-dd: ";
+            date=auxiliaryMethods.loadLine();
+        }
+        while(!checkStartDate(date))
+        {
+            cout<<"Data musi byc pozniejsza niz 2000-01-01. Wpisz date ponownie: ";
+            date=auxiliaryMethods.loadLine();
+        }
+        while(!checkDayMonth(date) || !checkMonthDate(date))
+        {
+            cout<<"Wpisz date ponownie: ";
+            date=auxiliaryMethods.loadLine();
+        }
+        return convertDateToInteger(date);
+}

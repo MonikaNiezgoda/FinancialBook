@@ -21,7 +21,6 @@ Income FileWithIncomes::getNewIncomeData()
 {
     Income income;
     char sign;
-    int dateInt;
 
     income.setIncomeId(lastIncomeId+1);
     lastIncomeId=income.getIncomeId();
@@ -198,6 +197,11 @@ void FileWithIncomes::showAllIncomesCurrentMonth()
 void FileWithIncomes::showAllIncomesPreviousMonth()
 {
     sumIncomes=balance.showAllIncomesPreviousMonth(incomes);
+}
+
+void FileWithIncomes::showAllIncomesChosenDates()
+{
+    sumIncomes=balance.showAllIncomesChosenDates(incomes);
 }
 
 int FileWithIncomes::getSumIncomes()

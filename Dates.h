@@ -33,6 +33,7 @@ public:
     int separateYearFromDateInt(int dateInt);
     int separateMonthFromDateInt(int dateInt);
     int getDaysAMonth(int monthInt, int dateInt);
+    int checkDateString(string date);
 };
 
 #endif
