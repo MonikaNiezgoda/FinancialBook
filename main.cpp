@@ -51,8 +51,11 @@ int main()
             case '5':
                 financialBook.showAllChosenDates();
                 break;
+            case '6':
+                financialBook.changePassword();
+                break;
             case '7':
-                financialBook.loggedOutUser();
+                financialBook.logoutUser();
                 break;
             }
         }

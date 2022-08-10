@@ -132,7 +132,7 @@ void UserMenager::changePassword()
             system("pause");
         }
     }
-    //plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+    fileWithUsers.saveAllUsersToFile(users);
 }
 
 int UserMenager::getLoggedInUserId()
@@ -145,7 +145,9 @@ void UserMenager::setLoggedInUserId(int newId)
     loggedInUserId = newId;
 }
 
-int UserMenager::loggedOutUser()
+int UserMenager::logoutUser()
 {
     loggedInUserId = 0;
 }
+
+

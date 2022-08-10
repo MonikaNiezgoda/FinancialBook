@@ -78,3 +78,21 @@ vector <User> FileWithUsers::loadUsersFromFile()
     }
     return users;
 }
+
+
+void FileWithUsers::saveAllUsersToFile(vector <User> &users)
+{
+   if (remove ("users.xml") == 0 )
+       cout << "Plik usuniety" << endl;
+    else
+        cout << "Wystapil blad podczas usuwania pliku" << endl;
+
+    vector <User>::iterator itrEnd = --users.end();
+
+    for (vector <User>::iterator itr = users.begin(); itr != users.end(); itr++)
+    {
+       addUserToFile(*itr);
+    }
+}
+
+
