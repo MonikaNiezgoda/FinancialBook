@@ -66,6 +66,7 @@ Expense FileWithExpenses::getNewExpenseData()
 
     cout << "Podaj wartosc: ";
     expense.setAmount(auxiliaryMethods.checkDotsInAmount(auxiliaryMethods.loadLine())); //zmiana wartosci na z kropką
+
     return expense;
 }
 

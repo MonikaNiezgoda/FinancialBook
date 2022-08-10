@@ -82,10 +82,7 @@ vector <User> FileWithUsers::loadUsersFromFile()
 
 void FileWithUsers::saveAllUsersToFile(vector <User> &users)
 {
-   if (remove ("users.xml") == 0 )
-       cout << "Plik usuniety" << endl;
-    else
-        cout << "Wystapil blad podczas usuwania pliku" << endl;
+   remove ("users.xml") == 0;
 
     vector <User>::iterator itrEnd = --users.end();
 
