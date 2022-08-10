@@ -144,3 +144,8 @@ void UserMenager::setLoggedInUserId(int newId)
 {
     loggedInUserId = newId;
 }
+
+int UserMenager::loggedOutUser()
+{
+    loggedInUserId = 0;
+}

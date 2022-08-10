@@ -35,9 +35,6 @@ public:
     int showAllIncomesChosenDates(vector<Income> incomes, int startDay,int endDay);
     int showAllExpensesChosenDates(vector<Expense> expenses, int startDate,int endDate);
 
-
-   int getStartDay();
-   void setStartDay(int newStartDay);
 };
 
 #endif

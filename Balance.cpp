@@ -205,15 +205,3 @@ int Balance::showAllExpensesChosenDates(vector<Expense> expenses, int startDate,
         return 0;
     }
 }
-
-
-
-int Balance::getStartDay()
-{
-    return startDay;
-}
-
-void Balance::setStartDay(int newStartDay)
-{
-    startDay=newStartDay;
-}

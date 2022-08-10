@@ -51,6 +51,9 @@ int main()
             case '5':
                 financialBook.showAllChosenDates();
                 break;
+            case '7':
+                financialBook.loggedOutUser();
+                break;
             }
         }
     }

@@ -21,6 +21,7 @@ class UserMenager
     bool isLoginExist(string login);
     User getNewUserData();
 
+
 public:
     UserMenager() /*: FILE_NAME_WITH_USERS(fileNameWithUsers)*/{
     loggedInUserId = 0;
@@ -30,11 +31,11 @@ public:
     int loginUser();
     bool isUserLoggedIn();
     void changePassword();
-    //int wylogowanieUzytkownika();
     int getLoggedInUserId();
     void setLoggedInUserId(int newId);
     bool isLoginExist();
     void showAllUsers();
+    int loggedOutUser();
 };
 
 #endif
