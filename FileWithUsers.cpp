@@ -46,7 +46,7 @@ vector <User> FileWithUsers::loadUsersFromFile()
     User user;
     vector <User> users;
     CMarkup xml;
-    bool bSuccess = xml.Load( "users.xml");
+    bool bSuccess = xml.Load( FILE_NAME_WITH_USERS);
     xml.FindElem();
     xml.IntoElem();
 
@@ -80,15 +80,36 @@ vector <User> FileWithUsers::loadUsersFromFile()
 }
 
 
-void FileWithUsers::saveAllUsersToFile(vector <User> &users)
+void FileWithUsers::changeUserPasswordInFile(int userId, string newPassword)
 {
-   remove ("users.xml") == 0;
+    CMarkup xml;
 
-    vector <User>::iterator itrEnd = --users.end();
-
-    for (vector <User>::iterator itr = users.begin(); itr != users.end(); itr++)
+    bool fileExists = xml.Load(FILE_NAME_WITH_USERS);
+    xml.FindElem();
+    xml.IntoElem();
+    while(xml.FindElem("User"))
     {
-       addUserToFile(*itr);
+        xml.IntoElem();
+        if( xml.FindElem("UserId"));
+        {
+            if (xml.GetData()==AuxiliaryMethods::konwerjsaIntNaString(userId))
+            {
+                cout<<userId<<endl;
+                system("pause");
+                if(xml.FindElem("Password"))
+                {
+                    //xml.IntoElem();
+                    cout<<xml.GetData()<<endl;
+
+                     system("pause");
+                    xml.RemoveElem();
+                    xml.AddElem("Password2", newPassword);
+                }
+            }
+            //else xml.OutOfElem();
+        }
+        xml.OutOfElem();
+
     }
 }
 

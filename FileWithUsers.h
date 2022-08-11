@@ -6,6 +6,7 @@
 
 #include "User.h"
 #include "Markup.h"
+#include "AuxiliaryMethods.h"
 
 using namespace std;
 
@@ -18,7 +19,7 @@ class FileWithUsers
     void addUserToFile(User user);
     //FileWithUsers(string fileNameWithUsers) :  FILE_NAME_WITH_USERS("Users.xml")  {};
     vector <User> loadUsersFromFile();
-    void saveAllUsersToFile(vector <User> &users);
+    void changeUserPasswordInFile(int userId, string newPassword);
 
 };
 

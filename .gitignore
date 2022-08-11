@@ -5,3 +5,4 @@ Debug/*
 *.depend
 *.exe
 *.cbp
+obj/Debug*

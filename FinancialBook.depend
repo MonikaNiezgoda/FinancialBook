@@ -19,15 +19,16 @@
 	<string>
 	<afx.h>
 
-1660152665 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
+1660247299 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.cpp
 	"FileWithUsers.h"
 
-1660144994 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.h
+1660246391 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithusers.h
 	<iostream>
 	<vector>
 	<cstdlib>
 	"User.h"
 	"Markup.h"
+	"AuxiliaryMethods.h"
 
 1660244627 c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.h
 	<iostream>
@@ -39,7 +40,7 @@
 	<iostream>
 	"FinancialBook.h"
 
-1660145119 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
+1660245843 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
 	"UserMenager.h"
 
 1660154705 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
@@ -70,7 +71,7 @@
 	<iostream>
 	<string>
 
-1660143091 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
+1660244627 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
 	"FileWithIncomes.h"
 
 1660244626 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
@@ -99,7 +100,7 @@
 1659868229 c:\users\monika\documents\moniki\projekty c++\financialbook\expense.h
 	<iostream>
 
-1660153360 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithexpenses.cpp
+1660244626 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithexpenses.cpp
 	"FileWithExpenses.h"
 
 1660244626 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithexpenses.h

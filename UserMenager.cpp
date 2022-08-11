@@ -132,7 +132,7 @@ void UserMenager::changePassword()
             system("pause");
         }
     }
-    fileWithUsers.saveAllUsersToFile(users);
+    fileWithUsers.changeUserPasswordInFile(loggedInUserId,newPassword);
 }
 
 int UserMenager::getLoggedInUserId()
