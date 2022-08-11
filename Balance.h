@@ -18,7 +18,6 @@ class Balance
     int showIncomeData(Income income);
     int showExpenseData(Expense expense);
     Dates dates;
-    AuxiliaryMethods auxiliaryMethods;
 
 public:
     Balance()

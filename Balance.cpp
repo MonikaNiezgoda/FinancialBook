@@ -39,7 +39,7 @@ int Balance::showIncomeData(Income income)
         cout << "Przychod:           " << income.getItem() << endl;
         cout << "Wartosc:     " << income.getAmount() << endl;
         cout<<endl;
-        return auxiliaryMethods.convertStringToInteger(income.getAmount());
+        return AuxiliaryMethods::convertStringToInteger(income.getAmount());
     }
     else return 0;
 }
@@ -51,7 +51,7 @@ int Balance::showExpenseData(Expense expense)
         cout << "Wydatek:           " << expense.getItem() << endl;
         cout << "Wartosc:     " << expense.getAmount() << endl;
         cout<<endl;
-        return auxiliaryMethods.convertStringToInteger(expense.getAmount());
+        return AuxiliaryMethods::convertStringToInteger(expense.getAmount());
     }
     else return 0;
 }

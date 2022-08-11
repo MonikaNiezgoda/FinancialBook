@@ -70,7 +70,7 @@ int UserMenager::loginUser()
     system("cls");
 
     cout << endl << "Podaj login: ";
-    login = auxiliaryMethods.loadLine();
+    login = AuxiliaryMethods::loadLine();
 
     for (int i=0; i<users.size(); i++)
     {
@@ -79,7 +79,7 @@ int UserMenager::loginUser()
             for (int attempt = 3; attempt > 0; attempt--)
             {
                 cout << "Podaj haslo. Pozostalo prob: " << attempt << ": ";
-                password = auxiliaryMethods.loadLine();
+                password = AuxiliaryMethods::loadLine();
 
                 if (users[i].getPassword() == password)
                 {
@@ -121,7 +121,7 @@ void UserMenager::changePassword()
 {
     string newPassword = "";
     cout << "Podaj nowe haslo: ";
-    newPassword = auxiliaryMethods.loadLine();
+    newPassword = AuxiliaryMethods::loadLine();
 
     for (int i=0; i<users.size();i++)
     {

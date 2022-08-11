@@ -18,7 +18,6 @@ class FileWithExpenses
     const int LOGGED_IN_USER_ID;
     vector <Expense> expenses;
     int lastExpenseId, sumExpenses;
-    AuxiliaryMethods auxiliaryMethods;
     Dates dates;
     Balance balance;
 

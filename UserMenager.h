@@ -15,7 +15,6 @@ class UserMenager
     vector <User> users;
     //const string FILE_NAME_WITH_USERS;
     FileWithUsers fileWithUsers;
-    AuxiliaryMethods auxiliaryMethods;
 
     int getNewUserId();
     bool isLoginExist(string login);

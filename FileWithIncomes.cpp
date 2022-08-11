@@ -29,7 +29,7 @@ Income FileWithIncomes::getNewIncomeData()
     string date;
     cout << "Czy przychod z dnia dzisiejszego:";
     cout << endl << "Wcisnij 't' jesli tak, wcisnij 'n' jesli data jest inna: ";
-    sign = auxiliaryMethods.loadChar();
+    sign = AuxiliaryMethods::loadChar();
     if (sign == 't')
     {
         cout<<"Dzisiejsza data to: ";
@@ -38,33 +38,33 @@ Income FileWithIncomes::getNewIncomeData()
     }
     if(sign=='n')
     {
-        cout<<"Podaj date: "; // jak sprawdzić czy data jest dobrze wpisana??
-        date = auxiliaryMethods.loadLine();
+        cout<<"Podaj date: ";
+        date = AuxiliaryMethods::loadLine();
         while (!dates.checkDateFormat(date))
         {
             cout<<"Wpisz jeszcze raz date w poprawnym formacie rrrr-mm-dd: ";
-            date=auxiliaryMethods.loadLine();
+            date=AuxiliaryMethods::loadLine();
         }
         while(!dates.checkStartDate(date))
         {
             cout<<"Data musi byc pozniejsza niz 2000-01-01. Wpisz date ponownie: ";
-            date=auxiliaryMethods.loadLine();
+            date=AuxiliaryMethods::loadLine();
         }
         while(!dates.checkDayMonth(date) || !dates.checkMonthDate(date))
         {
             cout<<"Wpisz date ponownie: ";
-            date=auxiliaryMethods.loadLine();
+            date=AuxiliaryMethods::loadLine();
         }
     }
     income.setDate(date);
 
     string item;
     cout << "Podaj rodzaj przychodu: ";
-    item = auxiliaryMethods.loadLine();
-    income.setItem(auxiliaryMethods.changeFirstLetterForUpperCaseAndOthersForLowerCase(item));// czy zamieniac pierwsza litere na duza?
+    item = AuxiliaryMethods::loadLine();
+    income.setItem(AuxiliaryMethods::changeFirstLetterForUpperCaseAndOthersForLowerCase(item));// czy zamieniac pierwsza litere na duza?
 
     cout << "Podaj wartosc: ";
-    income.setAmount(auxiliaryMethods.checkDotsInAmount(auxiliaryMethods.loadLine())); //zmiana wartosci na z kropką
+    income.setAmount(AuxiliaryMethods::checkDotsInAmount(AuxiliaryMethods::loadLine())); //zmiana wartosci na z kropką
     return income;
 }
 
@@ -127,7 +127,7 @@ vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
 
         if(xml.FindElem("UserId"))
         {
-            while(LOGGED_IN_USER_ID==auxiliaryMethods.convertStringToInteger(xml.GetData()))
+            while(LOGGED_IN_USER_ID==AuxiliaryMethods::convertStringToInteger(xml.GetData()))
             {
                 income.setUserId(atoi(xml.GetData().c_str()));   //atoi(pojedynczaDanaUzytkownika.c_str())
                 if(xml.FindElem("IncomeId"))
