@@ -1,8 +1,7 @@
 obj/*
 bin/*
-Users.xml
-Debug/
-FinancialBook.*
-Incomes.xml
+Debug/*
+*.xml
 *.depend
 *.exe
+*.cbp
