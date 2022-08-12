@@ -94,15 +94,9 @@ void FileWithUsers::changeUserPasswordInFile(int userId, string newPassword)
         {
             if (xml.GetData()==AuxiliaryMethods::konwerjsaIntNaString(userId))
             {
-                /*cout<<userId<<endl;
-                system("pause");*/
                 if(xml.FindElem("Password"))
                 {
-                    string oldPassword=xml.GetData();
-                    cout<<oldPassword<<endl;
-                    system("pause");
-                    xml.RemoveElem();
-                    xml.AddElem("Password",newPassword);
+                    xml.SetData(newPassword);
                 }
             }
         }
