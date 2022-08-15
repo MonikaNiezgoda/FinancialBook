@@ -64,7 +64,7 @@ Income FileWithIncomes::getNewIncomeData()
     income.setItem(AuxiliaryMethods::changeFirstLetterForUpperCaseAndOthersForLowerCase(item));// czy zamieniac pierwsza litere na duza?
 
     cout << "Podaj wartosc: ";
-    income.setAmount(AuxiliaryMethods::checkDotsInAmount(AuxiliaryMethods::loadLine())); //zmiana wartosci na z kropką
+    income.setAmount(AuxiliaryMethods::checkDotsInAmount(AuxiliaryMethods::loadLine()));
     return income;
 }
 
@@ -108,7 +108,6 @@ bool FileWithIncomes::addIncomeToFile(Income income)
         return true;
     }
     else
-        cout << "Nie udalo sie otworzyc pliku " << FILE_NAME_WITH_INCOMES << " i zapisac w nim danych." << endl;
     return false;
 }
 

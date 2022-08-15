@@ -56,22 +56,26 @@ string AuxiliaryMethods:: changeFirstLetterForUpperCaseAndOthersForLowerCase(str
 
 string AuxiliaryMethods::checkDotsInAmount (string amount)
 {
-    for (int i=0; i<amount.size()+1; i++)
+    int dlugosc=amount.size();
+    for (int i=0; i<amount.size(); i++)
     {
         if (amount[i]==',')
         {
             amount.replace(i,1,".");
-            //return amount;
         }
-
-        /*if (amount[amount.size()-2]!=',' && amount[amount.size()-2]!='.' )
-        {
-            amount=amount+".00";
-            return amount;
-        }
-
-       else*/
     }
+    if (amount[dlugosc-2]=='.' )
+    {
+        amount=amount+"0";
         return amount;
+    }
+    if (amount[dlugosc-3]!='.' || amount[dlugosc-2]!='.' )
+    {
+        amount=amount+".00";
+        return amount;
+    }
+    else
+        return amount;
+
 }
 

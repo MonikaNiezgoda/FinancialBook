@@ -43,7 +43,7 @@
 1660245843 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
 	"UserMenager.h"
 
-1660154705 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
+1660566007 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
 	"AuxiliaryMethods.h"
 
 1658516646 c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.h
@@ -71,7 +71,7 @@
 	<iostream>
 	<string>
 
-1660244627 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
+1660565113 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
 	"FileWithIncomes.h"
 
 1660244626 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
