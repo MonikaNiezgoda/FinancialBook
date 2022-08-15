@@ -123,12 +123,12 @@ vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
     while(xml.FindElem("Income"))
     {
         xml.IntoElem();
-
-        if(xml.FindElem("UserId"))
-        {
-            while(LOGGED_IN_USER_ID==AuxiliaryMethods::convertStringToInteger(xml.GetData()))
+            while(xml.FindElem("UserId"))
             {
-                income.setUserId(atoi(xml.GetData().c_str()));   //atoi(pojedynczaDanaUzytkownika.c_str())
+                lastIncomeId++;
+                if(LOGGED_IN_USER_ID==AuxiliaryMethods::convertStringToInteger(xml.GetData()))
+                {
+                 income.setUserId(atoi(xml.GetData().c_str()));   //atoi(pojedynczaDanaUzytkownika.c_str())
                 if(xml.FindElem("IncomeId"))
                 {
                     income.setIncomeId(atoi(xml.GetData().c_str()));
@@ -147,10 +147,11 @@ vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
                 }
                 incomes.push_back(income);
             }
+            }
             xml.OutOfElem();
         }
-    }
-    lastIncomeId=incomes.size();
+    cout<<lastIncomeId<<endl;
+    system("pause");
 
     return incomes;
 }
