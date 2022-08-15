@@ -104,5 +104,3 @@ void FileWithUsers::changeUserPasswordInFile(int userId, string newPassword)
     }
     xml.Save(FILE_NAME_WITH_USERS);
 }
-
-

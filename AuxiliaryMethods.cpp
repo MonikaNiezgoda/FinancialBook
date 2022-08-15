@@ -61,17 +61,17 @@ string AuxiliaryMethods::checkDotsInAmount (string amount)
         if (amount[i]==',')
         {
             amount.replace(i,1,".");
-            return amount;
+            //return amount;
         }
 
-        if (amount[amount.size()-2]!=',' && amount[amount.size()-2]!='.' )
+        /*if (amount[amount.size()-2]!=',' && amount[amount.size()-2]!='.' )
         {
             amount=amount+".00";
             return amount;
         }
 
-       else
-        return amount;
+       else*/
     }
+        return amount;
 }
 
