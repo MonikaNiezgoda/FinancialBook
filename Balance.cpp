@@ -1,7 +1,8 @@
 #include "Balance.h"
 
-int Balance::showAllIncomesCurrentMonth(vector<Income> incomes)
+float Balance::showAllIncomesCurrentMonth(vector<Income> incomes)
 {
+    sumIncomes=0;
     Income income;
     currentMonth=dates.separateMonthFromDateInt(dates.getTodayDateInt());
     currentYear=dates.separateYearFromDateInt(dates.getTodayDateInt());
@@ -31,7 +32,7 @@ int Balance::showAllIncomesCurrentMonth(vector<Income> incomes)
     }
 }
 
-int Balance::showIncomeData(Income income)
+float Balance::showIncomeData(Income income)
 {
     if (dates.convertDateToInteger(income.getDate())<endDay+1 && dates.convertDateToInteger(income.getDate())>startDay-1)
     {
@@ -39,11 +40,11 @@ int Balance::showIncomeData(Income income)
         cout << "Przychod:           " << income.getItem() << endl;
         cout << "Wartosc:     " << income.getAmount() << endl;
         cout<<endl;
-        return AuxiliaryMethods::convertStringToInteger(income.getAmount());
+        return stof(income.getAmount());
     }
     else return 0;
 }
-int Balance::showExpenseData(Expense expense)
+float Balance::showExpenseData(Expense expense)
 {
     if (dates.convertDateToInteger(expense.getDate())<endDay && dates.convertDateToInteger(expense.getDate())>startDay)
     {
@@ -56,8 +57,9 @@ int Balance::showExpenseData(Expense expense)
     else return 0;
 }
 
-int Balance::showAllIncomesPreviousMonth(vector<Income> incomes)
+float Balance::showAllIncomesPreviousMonth(vector<Income> incomes)
 {
+    sumIncomes=0;
     Income income;
     previousMonth=dates.separateMonthFromDateInt(dates.getTodayDateInt())-1;
     currentYear=dates.separateYearFromDateInt(dates.getTodayDateInt());
@@ -87,8 +89,9 @@ int Balance::showAllIncomesPreviousMonth(vector<Income> incomes)
     }
 }
 
-int Balance::showAllExpensesCurrentMonth(vector<Expense> expenses)
+float Balance::showAllExpensesCurrentMonth(vector<Expense> expenses)
 {
+    sumExpenses=0;
     Expense expense;
     currentMonth=dates.separateMonthFromDateInt(dates.getTodayDateInt());
     currentYear=dates.separateYearFromDateInt(dates.getTodayDateInt());
@@ -119,8 +122,9 @@ int Balance::showAllExpensesCurrentMonth(vector<Expense> expenses)
 }
 
 
-int Balance::showAllExpensesPreviousMonth(vector<Expense> expenses)
+float Balance::showAllExpensesPreviousMonth(vector<Expense> expenses)
 {
+    sumExpenses=0;
     Expense expense;
     previousMonth=dates.separateMonthFromDateInt(dates.getTodayDateInt())-1;
     currentYear=dates.separateYearFromDateInt(dates.getTodayDateInt());
@@ -150,8 +154,9 @@ int Balance::showAllExpensesPreviousMonth(vector<Expense> expenses)
     }
 }
 
-int Balance::showAllIncomesChosenDates(vector<Income> incomes, int startDate,int endDate)
+float Balance::showAllIncomesChosenDates(vector<Income> incomes, int startDate,int endDate)
 {
+    sumIncomes=0;
     Income income;
     startDay=startDate;
     endDay=endDate;
@@ -178,8 +183,9 @@ int Balance::showAllIncomesChosenDates(vector<Income> incomes, int startDate,int
     }
 }
 
-int Balance::showAllExpensesChosenDates(vector<Expense> expenses, int startDate,int endDate)
+float Balance::showAllExpensesChosenDates(vector<Expense> expenses, int startDate,int endDate)
 {
+    sumExpenses=0;
     Expense expense;
     startDay=startDate;
     endDay=endDate;

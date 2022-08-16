@@ -115,6 +115,7 @@ vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
 {
     Income income;
     vector <Income> incomes;
+    lastIncomeId =0;
     CMarkup xml;
     xml.Load(FILE_NAME_WITH_INCOMES);
     xml.FindElem();
@@ -150,9 +151,6 @@ vector <Income> FileWithIncomes::loadIncomesLoggedInUser(int loggedInUserId)
             }
             xml.OutOfElem();
         }
-    cout<<lastIncomeId<<endl;
-    system("pause");
-
     return incomes;
 }
 
@@ -172,7 +170,7 @@ void FileWithIncomes::showAllIncomesChosenDates(int startDate,int endDate)
     sumIncomes=balance.showAllIncomesChosenDates(incomes, startDate, endDate);
 }
 
-int FileWithIncomes::getSumIncomes()
+float FileWithIncomes::getSumIncomes()
 {
     return sumIncomes;
 }

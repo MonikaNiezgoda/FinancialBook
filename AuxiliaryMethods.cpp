@@ -69,7 +69,7 @@ string AuxiliaryMethods::checkDotsInAmount (string amount)
         amount=amount+"0";
         return amount;
     }
-    if (amount[dlugosc-3]!='.' || amount[dlugosc-2]!='.' )
+    if (amount[dlugosc-3]!='.' && amount[dlugosc-2]!='.' )
     {
         amount=amount+".00";
         return amount;

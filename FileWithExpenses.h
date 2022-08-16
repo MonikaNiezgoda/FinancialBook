@@ -38,6 +38,6 @@ public:
         void showAllExpensesCurrentMonth();
         void showAllExpensesPreviousMonth();
         void showAllExpensesChosenDates(int startDate,int endDate);
-        int getSumExpenses();
+        float getSumExpenses();
 };
 #endif

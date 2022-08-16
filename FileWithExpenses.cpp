@@ -118,6 +118,7 @@ vector <Expense> FileWithExpenses::loadExpensesLoggedInUser(int loggedInUserId)
 {
     Expense expense;
     vector <Expense> expenses;
+    lastExpenseId=0;
     CMarkup xml;
     xml.Load(FILE_NAME_WITH_EXPENSES);
     xml.FindElem();
@@ -127,9 +128,10 @@ vector <Expense> FileWithExpenses::loadExpensesLoggedInUser(int loggedInUserId)
     {
         xml.IntoElem();
 
-        if(xml.FindElem("UserId"))
+        while(xml.FindElem("UserId"))
         {
-            while(LOGGED_IN_USER_ID==AuxiliaryMethods::convertStringToInteger(xml.GetData()))
+            lastExpenseId++;
+            if(LOGGED_IN_USER_ID==AuxiliaryMethods::convertStringToInteger(xml.GetData()))
             {
                 expense.setUserId(atoi(xml.GetData().c_str()));   //atoi(pojedynczaDanaUzytkownika.c_str())
                 if(xml.FindElem("ExpenseId"))
@@ -153,9 +155,7 @@ vector <Expense> FileWithExpenses::loadExpensesLoggedInUser(int loggedInUserId)
             xml.OutOfElem();
         }
     }
-    lastExpenseId=expenses.size();
-
-    return expenses;
+return expenses;
 }
 
 
@@ -169,7 +169,7 @@ void FileWithExpenses::showAllExpensesPreviousMonth()
     sumExpenses=balance.showAllExpensesPreviousMonth(expenses);
 }
 
-int FileWithExpenses::getSumExpenses()
+float FileWithExpenses::getSumExpenses()
 {
     return sumExpenses;
 }

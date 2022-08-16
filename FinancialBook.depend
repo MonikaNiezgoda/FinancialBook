@@ -43,7 +43,7 @@
 1660245843 source:c:\users\monika\documents\moniki\projekty c++\financialbook\usermenager.cpp
 	"UserMenager.h"
 
-1660566174 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
+1660676584 source:c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.cpp
 	"AuxiliaryMethods.h"
 
 1658516646 c:\users\monika\documents\moniki\projekty c++\financialbook\auxiliarymethods.h
@@ -52,7 +52,7 @@
 	<algorithm>
 	<cstdlib>
 
-1660145649 source:c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.cpp
+1660677314 source:c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.cpp
 	"FinancialBook.h"
 
 1660144995 c:\users\monika\documents\moniki\projekty c++\financialbook\financialbook.h
@@ -71,10 +71,10 @@
 	<iostream>
 	<string>
 
-1660574345 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
+1660677257 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.cpp
 	"FileWithIncomes.h"
 
-1660244626 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
+1660677633 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithincomes.h
 	<iostream>
 	<vector>
 	<sstream>
@@ -100,10 +100,10 @@
 1659868229 c:\users\monika\documents\moniki\projekty c++\financialbook\expense.h
 	<iostream>
 
-1660244626 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithexpenses.cpp
+1660676584 source:c:\users\monika\documents\moniki\projekty c++\financialbook\filewithexpenses.cpp
 	"FileWithExpenses.h"
 
-1660244626 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithexpenses.h
+1660663622 c:\users\monika\documents\moniki\projekty c++\financialbook\filewithexpenses.h
 	<iostream>
 	<vector>
 	<sstream>
@@ -113,10 +113,10 @@
 	"Dates.h"
 	"Balance.h"
 
-1660244063 source:c:\users\monika\documents\moniki\projekty c++\financialbook\balance.cpp
+1660677209 source:c:\users\monika\documents\moniki\projekty c++\financialbook\balance.cpp
 	"Balance.h"
 
-1660243903 c:\users\monika\documents\moniki\projekty c++\financialbook\balance.h
+1660677247 c:\users\monika\documents\moniki\projekty c++\financialbook\balance.h
 	<iostream>
 	<vector>
 	<algorithm>

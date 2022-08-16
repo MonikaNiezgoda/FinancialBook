@@ -14,9 +14,9 @@
 class Balance
 {
     int currentYear, currentMonth, endDay, startDay, previousMonth;
-    int sumIncomes, sumExpenses, balance;
-    int showIncomeData(Income income);
-    int showExpenseData(Expense expense);
+    float sumIncomes, sumExpenses, balance;
+    float showIncomeData(Income income);
+    float showExpenseData(Expense expense);
     Dates dates;
 
 public:
@@ -27,12 +27,12 @@ public:
     }
 
     void showAllIncomes(vector<Income> incomes);
-    int showAllIncomesCurrentMonth(vector<Income> incomes);
-    int showAllIncomesPreviousMonth(vector<Income> incomes);
-    int showAllExpensesCurrentMonth(vector<Expense> expenses);
-    int showAllExpensesPreviousMonth(vector<Expense> expenses);
-    int showAllIncomesChosenDates(vector<Income> incomes, int startDay,int endDay);
-    int showAllExpensesChosenDates(vector<Expense> expenses, int startDate,int endDate);
+    float showAllIncomesCurrentMonth(vector<Income> incomes);
+    float showAllIncomesPreviousMonth(vector<Income> incomes);
+    float showAllExpensesCurrentMonth(vector<Expense> expenses);
+    float showAllExpensesPreviousMonth(vector<Expense> expenses);
+    float showAllIncomesChosenDates(vector<Income> incomes, int startDay,int endDay);
+    float showAllExpensesChosenDates(vector<Expense> expenses, int startDate,int endDate);
 
 };
 

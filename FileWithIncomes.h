@@ -39,6 +39,6 @@ public:
         void showAllIncomesCurrentMonth();
         void showAllIncomesPreviousMonth();
         void showAllIncomesChosenDates(int startDate,int endDate);
-        int getSumIncomes();
+        float getSumIncomes();
 };
 #endif

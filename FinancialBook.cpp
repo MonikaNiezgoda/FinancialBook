@@ -129,7 +129,7 @@ void FinancialBook::showAllChosenDates()
     fileWithIncomes->showAllIncomesChosenDates(startDate, endDate);
     fileWithExpenses->showAllExpensesChosenDates(startDate, endDate);
     system("cls");
-    cout<<"Bilans w wybranym czasie to: "<<fileWithIncomes->getSumIncomes()-fileWithExpenses->getSumExpenses()<<endl;
+    cout<<"Bilans w wybranym czasie to: "<<double(fileWithIncomes->getSumIncomes()-fileWithExpenses->getSumExpenses())<<endl;
     }
     else
     {
