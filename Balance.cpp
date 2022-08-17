@@ -20,7 +20,7 @@ float Balance::showAllIncomesCurrentMonth(vector<Income> incomes)
              sumIncomes+=showIncomeData(*itr);
         }
         cout << endl;
-        cout<<"Suma przychodow w biezacym miesiacu to: "<<sumIncomes<<endl<<endl;
+        cout<<"Suma przychodow w biezacym miesiacu to: "<<setprecision(2) << fixed << sumIncomes<<endl<<endl;
         system("pause");
         return sumIncomes;
     }
@@ -52,7 +52,7 @@ float Balance::showExpenseData(Expense expense)
         cout << "Wydatek:           " << expense.getItem() << endl;
         cout << "Wartosc:     " << expense.getAmount() << endl;
         cout<<endl;
-        return AuxiliaryMethods::convertStringToInteger(expense.getAmount());
+        return stof(expense.getAmount());
     }
     else return 0;
 }
@@ -210,4 +210,9 @@ float Balance::showAllExpensesChosenDates(vector<Expense> expenses, int startDat
         system("pause");
         return 0;
     }
+}
+
+float Balance::getSumIncomes()
+{
+    return sumIncomes;
 }

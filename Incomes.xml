@@ -7,4 +7,11 @@
 <Item>Wyplata</Item>
 <Amount>1200.50</Amount>
 </Income>
+<Income>
+<UserId>1</UserId>
+<IncomeId>2</IncomeId>
+<Date>2022-07-12</Date>
+<Item>Wyplata</Item>
+<Amount>2220.20</Amount>
+</Income>
 </Incomes>

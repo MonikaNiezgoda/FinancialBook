@@ -5,6 +5,7 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <iomanip>
 
 #include "Income.h"
 #include "Dates.h"
@@ -20,11 +21,6 @@ class Balance
     Dates dates;
 
 public:
-    Balance()
-    {
-        sumExpenses=0;
-        sumIncomes=0;
-    }
 
     void showAllIncomes(vector<Income> incomes);
     float showAllIncomesCurrentMonth(vector<Income> incomes);
@@ -33,6 +29,7 @@ public:
     float showAllExpensesPreviousMonth(vector<Expense> expenses);
     float showAllIncomesChosenDates(vector<Income> incomes, int startDay,int endDay);
     float showAllExpensesChosenDates(vector<Expense> expenses, int startDate,int endDate);
+    float getSumIncomes();
 
 };
 

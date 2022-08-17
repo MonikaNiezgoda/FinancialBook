@@ -114,7 +114,8 @@ void FinancialBook::showAllPreviousMonth()
     fileWithIncomes->showAllIncomesPreviousMonth();
     fileWithExpenses->showAllExpensesPreviousMonth();
     system("cls");
-    cout<<"Bilans w poprzednim miesiacu to: "<<fileWithIncomes->getSumIncomes()-fileWithExpenses->getSumExpenses()<<endl;
+
+    cout<<"Bilans w poprzednim miesiacu to: "<<setprecision(2) << fixed <<fileWithIncomes->getSumIncomes()-fileWithExpenses->getSumExpenses()<<endl;
     system("pause");
 }
 

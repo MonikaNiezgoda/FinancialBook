@@ -17,16 +17,16 @@ class FileWithExpenses
     const string FILE_NAME_WITH_EXPENSES;
     const int LOGGED_IN_USER_ID;
     vector <Expense> expenses;
-    int lastExpenseId, sumExpenses;
-    Dates dates;
-    Balance balance;
-
+    int lastExpenseId;
+    float sumExpenses;
     void getExpenseData();
     Expense getNewExpenseData();
     unsigned int convertDateToInteger(string date);
     bool addExpenseToFile(Expense income);
     vector <Expense> loadExpensesLoggedInUser(int loggedInUserId);
     void showExpenseData(Expense income);
+    Dates dates;
+    Balance balance;
 
 public:
   FileWithExpenses (string fileNameWithExpenses, int loggedInUserId) : FILE_NAME_WITH_EXPENSES(fileNameWithExpenses), LOGGED_IN_USER_ID(loggedInUserId)
